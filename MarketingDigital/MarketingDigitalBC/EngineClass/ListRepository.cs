@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MarketingDigitalBC.EngineClass
 {
-   `public class CreateList
+   `public class ListRepository
     {
     }
 }

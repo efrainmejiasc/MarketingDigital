@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MarketingDigitalBC.EngineClass
 {
-    public class CreateSender
+    public class SenderRepository
     {
         public async Task<SBResponse> CreateNewSender(string jsonContent, string endPoint, string apiKey)
         {
