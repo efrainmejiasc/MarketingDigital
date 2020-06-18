@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketingDigitalWeb", "MarketingDigital\MarketingDigitalWeb.csproj", "{8AF5496B-3F34-4084-AB74-8B0411C5687D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketingDigitalBC", "MarketingDigitalBC\MarketingDigitalBC.csproj", "{ABAE97E9-295C-4A25-9ABB-3621F0E80542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AF5496B-3F34-4084-AB74-8B0411C5687D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF5496B-3F34-4084-AB74-8B0411C5687D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF5496B-3F34-4084-AB74-8B0411C5687D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF5496B-3F34-4084-AB74-8B0411C5687D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAE97E9-295C-4A25-9ABB-3621F0E80542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAE97E9-295C-4A25-9ABB-3621F0E80542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAE97E9-295C-4A25-9ABB-3621F0E80542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAE97E9-295C-4A25-9ABB-3621F0E80542}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3825FC4-6C64-4CEB-8FA8-384C9935EEA1}
+	EndGlobalSection
+EndGlobal
