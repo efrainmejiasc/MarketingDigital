@@ -9,6 +9,5 @@ namespace MarketingDigitalBC.Response
         public int id { get; set; }
         public string messageId { get; set; }
         public bool exception { get; set; }
-        public string messageError { get; set; }
     }
 }
