@@ -19,7 +19,7 @@ namespace MarketingDigitalBC.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key", apiKey);
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
                 HttpResponseMessage request = await client.GetAsync(endPoint);
 
                 if (request.IsSuccessStatusCode)

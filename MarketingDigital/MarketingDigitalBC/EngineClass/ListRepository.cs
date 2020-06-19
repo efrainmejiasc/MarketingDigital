@@ -11,7 +11,7 @@ namespace MarketingDigitalBC.EngineClass
 {
     public class ListRepository
     {
-        public async Task<SBRecoverList> GetRecoverList(string apiKey,string endPoint)
+        public async Task<SBRecoverList> GetRecoverList()
         {
             var response = new SBRecoverList();
             string respuesta = string.Empty;
@@ -19,8 +19,8 @@ namespace MarketingDigitalBC.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key", apiKey);
-                HttpResponseMessage request = await client.GetAsync(endPoint);
+                client.DefaultRequestHeaders.Add("api-key",AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverList);
 
                 if (request.IsSuccessStatusCode)
                 {

@@ -19,8 +19,8 @@ namespace MarketingDigitalBC.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key", apiKey);
-                HttpResponseMessage request = await client.GetAsync(endPoint);
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverFolder);
 
                 if (request.IsSuccessStatusCode)
                 {
@@ -31,7 +31,7 @@ namespace MarketingDigitalBC.EngineClass
             return response;
         }
 
-        public async Task<SBResponse> CreateNewFolder(string jsonContent, string apiKey, string endPoint)
+        public async Task<SBResponse> CreateNewFolder(string jsonContent)
         {
             var response = new SBResponse();
             string respuesta = string.Empty;
@@ -39,8 +39,8 @@ namespace MarketingDigitalBC.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key", apiKey);
-                HttpResponseMessage request = await client.PostAsync(endPoint, new StringContent(jsonContent, Encoding.UTF8, "application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.PostAsync(AppConfiguration.EndPointCreateFolder, new StringContent(jsonContent, Encoding.UTF8, "application/json"));
                 if (request.IsSuccessStatusCode)
                 {
                     respuesta = await request.Content.ReadAsStringAsync();
