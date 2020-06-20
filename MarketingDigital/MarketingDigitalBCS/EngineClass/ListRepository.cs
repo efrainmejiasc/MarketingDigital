@@ -6,10 +6,11 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using MarketingDigitalBCS.EngineClass.Interfaces;
 
 namespace MarketingDigitalBCS.EngineClass
 {
-    public class ListRepository
+    public class ListRepository : IListRepository
     {
         public async Task<SBRecoverList> GetRecoverList()
         {
@@ -31,7 +32,7 @@ namespace MarketingDigitalBCS.EngineClass
             return response;
         }
 
-        public async Task<SBResponse> CreateNewList(string jsonContent, string apiKey, string endPoint)
+        public async Task<SBResponse> CreateNewList(string jsonContent)
         {
             var response = new SBResponse();
             string respuesta = string.Empty;
@@ -39,8 +40,8 @@ namespace MarketingDigitalBCS.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key", apiKey);
-                HttpResponseMessage request = await client.PostAsync(endPoint, new StringContent(jsonContent, Encoding.UTF8, "application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.PostAsync(AppConfiguration.EndPointCreateRecipientList, new StringContent(jsonContent, Encoding.UTF8, "application/json"));
                 if (request.IsSuccessStatusCode)
                 {
                     respuesta = await request.Content.ReadAsStringAsync();

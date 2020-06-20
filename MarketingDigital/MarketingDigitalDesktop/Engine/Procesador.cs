@@ -23,7 +23,7 @@ namespace MarketingDigitalDesktop.Engine
         public async Task<SBRecoverSender> ObtenerListaRemitentesAsync()
         {
             var senderRepository = new SenderRepository();
-            var procesor = new Procesor(null,senderRepository);
+            var procesor = new Procesor(senderRepository);
             return  await procesor.GetRecoverSender();
         }
 
@@ -37,9 +37,17 @@ namespace MarketingDigitalDesktop.Engine
 
         public async Task<SBRecoverFolder> ObtenerListaCarpetasAsync()
         {
-            var senderRepository = new FolderRepository();
-            var procesor = new Procesor(null, senderRepository);
+            var FolderRepository = new FolderRepository();
+            var procesor = new Procesor(FolderRepository);
             return await procesor.GetRecoverFolder();
+        }
+
+        public async Task<bool> CrearNuevaListaContactoAsync(string nombreLista, int idCarpeta)
+        {
+            var listRepository = new ListRepository();
+            var serializeModel = new SerializeModel();
+            var procesor = new Procesor(serializeModel, listRepository);
+            return await procesor.CreateNewListContactAsync(nombreLista, idCarpeta);
         }
 
     }

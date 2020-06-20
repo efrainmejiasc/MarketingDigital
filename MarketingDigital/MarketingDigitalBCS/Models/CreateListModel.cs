@@ -6,8 +6,8 @@ namespace MarketingDigitalBCS.Models
 {
     public class CreateListModel
     {
-        string name { get; set; }
-        string folderId{ get; set; }
+        public string name { get; set; }
+        public int  folderId{ get; set; }
 
     }
 }

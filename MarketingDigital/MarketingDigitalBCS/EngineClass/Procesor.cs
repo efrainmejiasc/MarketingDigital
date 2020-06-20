@@ -14,6 +14,9 @@ namespace MarketingDigitalBCS.EngineClass
         private readonly ISenderRepository senderRepository;
         private readonly ISerializeModel serializeModel;
         private readonly IFolderRepository folderRepository;
+        private readonly IListRepository listRepository;
+
+        #region CONSTRUCTORES
 
         public Procesor(IToolApp _toolApp)
         {
@@ -23,6 +26,16 @@ namespace MarketingDigitalBCS.EngineClass
         public Procesor(ISenderRepository _senderRepository)
         {
             senderRepository = _senderRepository;
+        }
+
+        public Procesor(IListRepository _listRepository)
+        {
+            listRepository = _listRepository;
+        }
+
+        public Procesor(IFolderRepository _folderRepository)
+        {
+            folderRepository = _folderRepository;
         }
 
         public Procesor(ISerializeModel _serializeModel ,ISenderRepository _senderRepository)
@@ -37,10 +50,13 @@ namespace MarketingDigitalBCS.EngineClass
             folderRepository = _folderRepository;
         }
 
+        public Procesor(ISerializeModel _serializeModel, IListRepository _listRepository)
+        {
+            serializeModel = _serializeModel;
+            listRepository = _listRepository;
+        }
 
-
-
-
+        #endregion 
 
 
         public bool EmailValido (string email)
@@ -71,5 +87,13 @@ namespace MarketingDigitalBCS.EngineClass
         {
             return await folderRepository.GetRecoverFolder();
         }
+
+        public async Task<bool> CreateNewListContactAsync(string nombreLista, int idCarpeta)
+        {
+            var jsonContent = serializeModel.SerializeCreateNewListContact(nombreLista, idCarpeta);
+            var result = await listRepository.CreateNewList(jsonContent);
+            return result.exception;
+        }
+
     }
 }

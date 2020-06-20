@@ -35,6 +35,7 @@
             this.carpetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCarpetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carpetasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,14 +63,14 @@
             // nuevoRemitente
             // 
             this.nuevoRemitente.Name = "nuevoRemitente";
-            this.nuevoRemitente.Size = new System.Drawing.Size(180, 22);
+            this.nuevoRemitente.Size = new System.Drawing.Size(166, 22);
             this.nuevoRemitente.Text = "Nuevo Remitente";
             this.nuevoRemitente.Click += new System.EventHandler(this.nuevoRemitente_Click);
             // 
             // remitentesToolStripMenuItem
             // 
             this.remitentesToolStripMenuItem.Name = "remitentesToolStripMenuItem";
-            this.remitentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.remitentesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.remitentesToolStripMenuItem.Text = "Remitentes";
             this.remitentesToolStripMenuItem.Click += new System.EventHandler(this.remitentesToolStripMenuItem_Click);
             // 
@@ -77,10 +78,11 @@
             // 
             this.carpetasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevaCarpetaToolStripMenuItem,
-            this.carpetasToolStripMenuItem1});
+            this.carpetasToolStripMenuItem1,
+            this.nuevaListaToolStripMenuItem});
             this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
-            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.carpetasToolStripMenuItem.Text = "Carpetas";
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.carpetasToolStripMenuItem.Text = "Carpetas y Listas";
             // 
             // nuevaCarpetaToolStripMenuItem
             // 
@@ -95,6 +97,13 @@
             this.carpetasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.carpetasToolStripMenuItem1.Text = "Carpetas";
             this.carpetasToolStripMenuItem1.Click += new System.EventHandler(this.carpetasToolStripMenuItem1_Click);
+            // 
+            // nuevaListaToolStripMenuItem
+            // 
+            this.nuevaListaToolStripMenuItem.Name = "nuevaListaToolStripMenuItem";
+            this.nuevaListaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaListaToolStripMenuItem.Text = "Nueva Lista";
+            this.nuevaListaToolStripMenuItem.Click += new System.EventHandler(this.nuevaListaToolStripMenuItem_Click);
             // 
             // MenuApp
             // 
@@ -122,6 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaCarpetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem nuevaListaToolStripMenuItem;
     }
 }
 

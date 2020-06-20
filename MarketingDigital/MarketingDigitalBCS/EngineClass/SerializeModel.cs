@@ -27,5 +27,15 @@ namespace MarketingDigitalBCS.EngineClass
             };
             return JsonConvert.SerializeObject(model);
         }
+
+        public string SerializeCreateNewListContact(string nombreLista , int idCarpeta)
+        {
+            var model = new CreateListModel()
+            {
+                name = nombreLista,
+                folderId = idCarpeta
+            };
+            return JsonConvert.SerializeObject(model);
+        }
     }
 }

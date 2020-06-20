@@ -32,7 +32,15 @@ namespace MarketingDigitalDesktop.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            if (dgv.SelectedRows.Count == 0 || string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("DEBE SELECCIONAR UNA CARPETA E INGRESAR UN NOMBRE DE LISTA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataGridViewRow row = dgv.CurrentRow;
+            var id = Convert.ToInt32(row.Cells["ID"].Value);
+            NuevaListaContactos(textBox1.Text,id);
         }
 
         public async Task SetTableCarpetaAsync()
@@ -43,6 +51,18 @@ namespace MarketingDigitalDesktop.Forms
             dgv = tool.ColorFila(dgv, Color.WhiteSmoke, Color.AliceBlue);
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.ClearSelection();
+        }
+
+        public async Task NuevaListaContactos(string nombreLista , int idCarpeta)
+        {
+            var procesador = new Procesador();
+            bool result = await procesador.CrearNuevaListaContactoAsync(nombreLista, idCarpeta);
+            if (!result)
+                MessageBox.Show("LISTA DE CONTACTOS CREADA CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("CREACION DE LISTA DE CONTACTOS FALLIDA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            textBox1.Text = string.Empty;
         }
     }
 }
