@@ -31,6 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.remitenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoRemitente = new System.Windows.Forms.ToolStripMenuItem();
+            this.remitentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carpetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaCarpetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carpetasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +42,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Gray;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.remitenteToolStripMenuItem});
+            this.remitenteToolStripMenuItem,
+            this.carpetasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -48,7 +53,8 @@
             // remitenteToolStripMenuItem
             // 
             this.remitenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoRemitente});
+            this.nuevoRemitente,
+            this.remitentesToolStripMenuItem});
             this.remitenteToolStripMenuItem.Name = "remitenteToolStripMenuItem";
             this.remitenteToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.remitenteToolStripMenuItem.Text = "Remitente";
@@ -59,6 +65,36 @@
             this.nuevoRemitente.Size = new System.Drawing.Size(180, 22);
             this.nuevoRemitente.Text = "Nuevo Remitente";
             this.nuevoRemitente.Click += new System.EventHandler(this.nuevoRemitente_Click);
+            // 
+            // remitentesToolStripMenuItem
+            // 
+            this.remitentesToolStripMenuItem.Name = "remitentesToolStripMenuItem";
+            this.remitentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.remitentesToolStripMenuItem.Text = "Remitentes";
+            this.remitentesToolStripMenuItem.Click += new System.EventHandler(this.remitentesToolStripMenuItem_Click);
+            // 
+            // carpetasToolStripMenuItem
+            // 
+            this.carpetasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaCarpetaToolStripMenuItem,
+            this.carpetasToolStripMenuItem1});
+            this.carpetasToolStripMenuItem.Name = "carpetasToolStripMenuItem";
+            this.carpetasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.carpetasToolStripMenuItem.Text = "Carpetas";
+            // 
+            // nuevaCarpetaToolStripMenuItem
+            // 
+            this.nuevaCarpetaToolStripMenuItem.Name = "nuevaCarpetaToolStripMenuItem";
+            this.nuevaCarpetaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaCarpetaToolStripMenuItem.Text = "Nueva Carpeta";
+            this.nuevaCarpetaToolStripMenuItem.Click += new System.EventHandler(this.nuevaCarpetaToolStripMenuItem_Click);
+            // 
+            // carpetasToolStripMenuItem1
+            // 
+            this.carpetasToolStripMenuItem1.Name = "carpetasToolStripMenuItem1";
+            this.carpetasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.carpetasToolStripMenuItem1.Text = "Carpetas";
+            this.carpetasToolStripMenuItem1.Click += new System.EventHandler(this.carpetasToolStripMenuItem1_Click);
             // 
             // MenuApp
             // 
@@ -82,6 +118,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem remitenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoRemitente;
+        private System.Windows.Forms.ToolStripMenuItem remitentesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevaCarpetaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carpetasToolStripMenuItem1;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using MarketingDigitalBCS.EngineClass;
+using MarketingDigitalBCS.Response;
 using System.Threading.Tasks;
 
 namespace MarketingDigitalDesktop.Engine
@@ -16,8 +17,29 @@ namespace MarketingDigitalDesktop.Engine
             var senderRepository = new SenderRepository();
             var serializeModel = new SerializeModel();
             var procesor = new Procesor(serializeModel,senderRepository);
-            var result = await procesor.CreateNewSenderAsync(nombre, email);
-            return result;
+            return await procesor.CreateNewSenderAsync(nombre, email);
+        }
+
+        public async Task<SBRecoverSender> ObtenerListaRemitentesAsync()
+        {
+            var senderRepository = new SenderRepository();
+            var procesor = new Procesor(null,senderRepository);
+            return  await procesor.GetRecoverSender();
+        }
+
+        public async Task<bool> CrearNuevaCarpetaAsync(string nombreCarpeta)
+        {
+            var folderRepository = new FolderRepository();
+            var serializeModel = new SerializeModel();
+            var procesor = new Procesor(serializeModel, folderRepository);
+            return await procesor.CreateNewFolderAsync(nombreCarpeta);
+        }
+
+        public async Task<SBRecoverFolder> ObtenerListaCarpetasAsync()
+        {
+            var senderRepository = new FolderRepository();
+            var procesor = new Procesor(null, senderRepository);
+            return await procesor.GetRecoverFolder();
         }
 
     }

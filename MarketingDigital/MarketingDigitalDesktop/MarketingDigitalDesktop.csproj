@@ -49,7 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\Interfaces\ITool.cs" />
     <Compile Include="Engine\Procesador.cs" />
+    <Compile Include="Engine\Tool.cs" />
+    <Compile Include="Forms\ListaCarpeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListaCarpeta.Designer.cs">
+      <DependentUpon>ListaCarpeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListaRemitente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListaRemitente.Designer.cs">
+      <DependentUpon>ListaRemitente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NuevaCarpeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NuevaCarpeta.Designer.cs">
+      <DependentUpon>NuevaCarpeta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NuevoRemitente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +84,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ListaCarpeta.resx">
+      <DependentUpon>ListaCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListaRemitente.resx">
+      <DependentUpon>ListaRemitente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NuevaCarpeta.resx">
+      <DependentUpon>NuevaCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NuevoRemitente.resx">
       <DependentUpon>NuevoRemitente.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,8 +128,6 @@
       <Name>MarketingDigitalBCS</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Engine\Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

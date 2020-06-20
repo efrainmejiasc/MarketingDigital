@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MarketingDigitalBCS.EngineClass.Interfaces
 {
-    public interface ISenderRepository
+    public interface IFolderRepository
     {
-        Task<SBRecoverSender> GetRecoverSender();
-        Task<SBResponse> CreateNewSender(string jsonContent);
+        Task<SBResponse> CreateNewFolder(string jsonContent);
+        Task<SBRecoverFolder> GetRecoverFolder();
     }
 }

@@ -6,6 +6,6 @@ namespace MarketingDigitalBCS.Models
 {
     public  class CreateFolderModel
     {
-        public string nameFolder { get; set; }
+        public string name { get; set; }
     }
 }

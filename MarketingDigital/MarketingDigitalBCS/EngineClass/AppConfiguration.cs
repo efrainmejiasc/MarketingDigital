@@ -9,6 +9,7 @@ namespace MarketingDigitalBCS.EngineClass
         public static string SbApiKey = "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";
         public static string SbSmtpKey = "UPDbq2sVG50yWQkA";
         public static string EndPointCreateSender = "https://api.sendinblue.com/v3/senders";
+        public static string EndPointRecoverSender = "https://api.sendinblue.com/v3/senders";
         public static string EndPointCreateFolder = "https://api.sendinblue.com/v3/contacts/folders";
         public static string EndPointRecoverFolder = "https://api.sendinblue.com/v3/contacts/folders";
         public static string EndPointRecoverListInFolder = "https://api.sendinblue.com/v3/contacts/folders/ID/lists"; //Remplazar ID por id de la carpeta
