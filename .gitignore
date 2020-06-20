@@ -264,3 +264,5 @@ __pycache__/
 *.cache
 MarketingDigital/.vs/MarketingDigital/v16/.suo
 MarketingDigital/MarketingDigitalBC/obj/Debug/netcoreapp3.1/MarketingDigitalBC.csproj.FileListAbsolute.txt
+MarketingDigital/MarketingDigitalBCS/obj/Debug/netstandard2.0/MarketingDigitalBCS.csproj.FileListAbsolute.txt
+MarketingDigital/MarketingDigitalDesktop/obj/Debug/MarketingDigitalDesktop.csprojAssemblyReference.cache
