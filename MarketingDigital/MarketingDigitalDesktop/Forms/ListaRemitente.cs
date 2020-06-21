@@ -45,5 +45,12 @@ namespace MarketingDigitalDesktop.Forms
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.ClearSelection();
         }
+
+        private void dgv_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgv = tool.ColorFila(dgv, Color.WhiteSmoke, Color.AliceBlue);
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv.ClearSelection();
+        }
     }
 }

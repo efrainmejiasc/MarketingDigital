@@ -51,5 +51,12 @@ namespace MarketingDigitalDesktop
             ListaCarpeta listaCarpeta = new ListaCarpeta(tool);
             listaCarpeta.ShowDialog();
         }
+
+        private void nuevoContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tool = new Tool();
+            NuevoContacto nuevoContacto = new NuevoContacto(tool);
+            nuevoContacto.ShowDialog();
+        }
     }
 }

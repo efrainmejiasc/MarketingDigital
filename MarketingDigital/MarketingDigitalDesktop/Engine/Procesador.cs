@@ -50,5 +50,12 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.CreateNewListContactAsync(nombreLista, idCarpeta);
         }
 
+        public async Task<SBRecoverListInFolder> ObtenerListasEnCarpetas(string idCarpeta)
+        {
+            var listRepository = new ListRepository();
+            var procesor = new Procesor(listRepository);
+            return await procesor.GetRecoverListInFolder(idCarpeta);
+        }
+
     }
 }

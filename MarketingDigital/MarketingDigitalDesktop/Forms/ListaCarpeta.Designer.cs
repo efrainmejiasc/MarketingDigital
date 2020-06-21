@@ -83,7 +83,7 @@
             this.Controls.Add(this.dgv);
             this.Name = "ListaCarpeta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Carpetas y Listas de Contactos ";
+            this.Text = "Carpetas ";
             this.Load += new System.EventHandler(this.ListaCarpeta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

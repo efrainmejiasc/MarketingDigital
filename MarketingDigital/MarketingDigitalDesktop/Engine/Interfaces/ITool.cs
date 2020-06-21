@@ -15,5 +15,6 @@ namespace MarketingDigitalDesktop.Engine.Interfaces
         DataTable SetTableFolder(SBRecoverFolder listFolders);
         DataGridView ColorFila(DataGridView dgv, Color a, Color b);
         DataTable SetTableRemitente(SBRecoverSender listRemitentes);
+        DataTable SetTableListInFolder(SBRecoverListInFolder listFolders);
     }
 }

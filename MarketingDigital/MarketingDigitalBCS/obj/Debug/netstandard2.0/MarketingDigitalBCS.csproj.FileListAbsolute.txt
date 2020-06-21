@@ -1,9 +1,9 @@
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\bin\Debug\netstandard2.0\MarketingDigitalBCS.deps.json
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\bin\Debug\netstandard2.0\MarketingDigitalBCS.dll
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\bin\Debug\netstandard2.0\MarketingDigitalBCS.pdb
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.csprojAssemblyReference.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.AssemblyInfoInputs.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.AssemblyInfo.cs
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.dll
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.pdb
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBCS\obj\Debug\netstandard2.0\MarketingDigitalBCS.csprojAssemblyReference.cache

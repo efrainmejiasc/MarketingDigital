@@ -10,5 +10,6 @@ namespace MarketingDigitalBCS.EngineClass.Interfaces
     {
         Task<SBRecoverList> GetRecoverList();
         Task<SBResponse> CreateNewList(string jsonContent);
+        Task<SBRecoverListInFolder> GetRecoverListInFolder(string id);
     }
 }

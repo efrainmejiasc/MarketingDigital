@@ -20,10 +20,15 @@ namespace MarketingDigitalDesktop.Engine
             dt.Columns.Add("NOMBRE");
             dt.Columns.Add("EMAIL");
             dt.Columns.Add("ESTADO");
-
+            var status = string.Empty;
             foreach (var item in listRemitentes.senders)
             {
-                dt.Rows.Add(item.id, item.name, item.email, item.active);
+                if (item.active)
+                    status = "ACTIVO";
+                else
+                    status = "INACTIVO";
+
+                dt.Rows.Add(item.id, item.name, item.email,status);
             }
             return dt;
         }
@@ -32,7 +37,7 @@ namespace MarketingDigitalDesktop.Engine
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
-            dt.Columns.Add("NOMBRE");
+            dt.Columns.Add("CARPETA");
             dt.Columns.Add("SUBCRISTORES");
 
 
@@ -42,6 +47,22 @@ namespace MarketingDigitalDesktop.Engine
             }
             return dt;
         }
+
+        public DataTable SetTableListInFolder(SBRecoverListInFolder listFolders)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("LISTA");
+            dt.Columns.Add("SUBCRISTORES");
+
+
+            foreach (var item in listFolders.lists)
+            {
+                dt.Rows.Add(item.id, item.name, item.totalSubscribers);
+            }
+            return dt;
+        }
+
         public DataGridView ColorFila(DataGridView dgv, Color a, Color b)
         {
             int n = 0;

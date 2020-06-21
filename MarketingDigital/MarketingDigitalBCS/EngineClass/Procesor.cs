@@ -95,5 +95,10 @@ namespace MarketingDigitalBCS.EngineClass
             return result.exception;
         }
 
+        public async Task<SBRecoverListInFolder> GetRecoverListInFolder(string idFolder)
+        {
+            return await listRepository.GetRecoverListInFolder(idFolder);
+        }
+
     }
 }

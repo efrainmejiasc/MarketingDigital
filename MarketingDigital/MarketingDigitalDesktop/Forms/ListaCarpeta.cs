@@ -29,6 +29,15 @@ namespace MarketingDigitalDesktop.Forms
         {
             SetTableCarpetaAsync();
         }
+        public async Task SetTableCarpetaAsync()
+        {
+            var procesador = new Procesador();
+            var listaCarpetas = await procesador.ObtenerListaCarpetasAsync();
+            dgv.DataSource = tool.SetTableFolder(listaCarpetas);
+            dgv = tool.ColorFila(dgv, Color.WhiteSmoke, Color.AliceBlue);
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv.ClearSelection();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,17 +51,7 @@ namespace MarketingDigitalDesktop.Forms
             var id = Convert.ToInt32(row.Cells["ID"].Value);
             NuevaListaContactos(textBox1.Text,id);
         }
-
-        public async Task SetTableCarpetaAsync()
-        {
-            var procesador = new Procesador();
-            var listaCarpetas = await procesador.ObtenerListaCarpetasAsync();
-            dgv.DataSource = tool.SetTableFolder(listaCarpetas);
-            dgv = tool.ColorFila(dgv, Color.WhiteSmoke, Color.AliceBlue);
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgv.ClearSelection();
-        }
-
+  
         public async Task NuevaListaContactos(string nombreLista , int idCarpeta)
         {
             var procesador = new Procesador();

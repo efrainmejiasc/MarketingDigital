@@ -32,6 +32,46 @@ namespace MarketingDigitalBCS.EngineClass
             return response;
         }
 
+        public async Task<SBRecoverListId> GetRecoverList(string id)
+        {
+            SBRecoverListId response = new SBRecoverListId();
+            string respuesta = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverListId.Replace("ID", id));
+
+                if (request.IsSuccessStatusCode)
+                {
+                    respuesta = await request.Content.ReadAsStringAsync();
+                    response = JsonConvert.DeserializeObject<SBRecoverListId>(respuesta);
+                }
+            }
+            return response;
+        }
+
+        public async Task<SBRecoverListInFolder> GetRecoverListInFolder(string id)
+        {
+             var response = new SBRecoverListInFolder();
+            string respuesta = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverListInFolder.Replace("ID", id));
+
+                if (request.IsSuccessStatusCode)
+                {
+                    respuesta = await request.Content.ReadAsStringAsync();
+                    response = JsonConvert.DeserializeObject<SBRecoverListInFolder>(respuesta);
+                }
+            }
+            return response;
+        }
+
         public async Task<SBResponse> CreateNewList(string jsonContent)
         {
             var response = new SBResponse();
