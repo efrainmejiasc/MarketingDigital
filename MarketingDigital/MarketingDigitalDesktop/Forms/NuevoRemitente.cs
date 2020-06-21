@@ -40,7 +40,7 @@ namespace MarketingDigitalDesktop.Forms
                 return;
             }
 
-            CreateNewRemitenteAsync(textBox1.Text, textBox2.Text);
+            _ = CreateNewRemitenteAsync(textBox1.Text, textBox2.Text);
         }
 
         private async Task CreateNewRemitenteAsync(string nombre,string email)

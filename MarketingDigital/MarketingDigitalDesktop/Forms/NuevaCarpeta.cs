@@ -30,7 +30,7 @@ namespace MarketingDigitalDesktop.Forms
                 return;
             }
 
-            CreateNewCarpetaAsync(textBox1.Text);
+            _ = CreateNewCarpetaAsync(textBox1.Text);
         }
 
         private async Task CreateNewCarpetaAsync(string nombreCarpeta)

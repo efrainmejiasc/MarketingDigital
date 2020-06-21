@@ -16,6 +16,8 @@ namespace MarketingDigitalDesktop.Forms
     public partial class NuevoContacto : Form
     {
         private readonly ITool tool;
+        private string idCarpeta = string.Empty;
+        private int idLista = 0;
         public NuevoContacto()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace MarketingDigitalDesktop.Forms
 
         private void NuevoContacto_Load(object sender, EventArgs e)
         {
-            SetTableCarpetaAsync();
+            _ = SetTableCarpetaAsync();
         }
         public async Task SetTableCarpetaAsync()
         {
@@ -59,8 +61,8 @@ namespace MarketingDigitalDesktop.Forms
         private void dgv1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgv1.CurrentRow;
-            var id = row.Cells["ID"].Value.ToString() ;
-            ObtenerListasEnCarpetaAsync(id);
+            idCarpeta = row.Cells["ID"].Value.ToString() ;
+            _ = ObtenerListasEnCarpetaAsync(idCarpeta);
         }
 
         private async Task ObtenerListasEnCarpetaAsync(string id)
@@ -87,12 +89,9 @@ namespace MarketingDigitalDesktop.Forms
             }
 
             DataGridViewRow row = dgv2.CurrentRow;
-            var id = Convert.ToInt32(row.Cells["ID"].Value);
-            CreateAddContactAsync(name.Text, lastName.Text, email.Text, phone.Text, id);
-            name.Text = string.Empty;
-            lastName.Text = string.Empty;
-            email.Text = string.Empty;
-            phone.Text = string.Empty;
+            idLista = Convert.ToInt32(row.Cells["ID"].Value);
+            _ = CreateAddContactAsync(name.Text, lastName.Text, email.Text, phone.Text, idLista);
+ 
         }
 
         private async Task CreateAddContactAsync(string name, string lastName, string email,string phone,int id)
@@ -100,9 +99,30 @@ namespace MarketingDigitalDesktop.Forms
             var procesador = new Procesador();
             bool result = await  procesador.CrearAgregarContactoAsync(name, lastName, email, phone, id, false);
             if (!result)
+            {
                 MessageBox.Show("CONTACTO CREADO CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _ = SetTableCarpetaAsync();
+                _ = ObtenerListasEnCarpetaAsync(idCarpeta);
+            }
             else
+            {
                 MessageBox.Show("CREACION DE CONTACTO FALLIDA, PUEDE QUE EL CONTACTO YA EXISTA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Limpiar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            name.Text = string.Empty;
+            lastName.Text = string.Empty;
+            email.Text = string.Empty;
+            phone.Text = string.Empty;
         }
     }
 }

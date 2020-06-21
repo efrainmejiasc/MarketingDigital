@@ -33,7 +33,7 @@ namespace MarketingDigitalDesktop.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SetTableRemitenteAsync();
+            _ = SetTableRemitenteAsync();
         }
 
         public async Task SetTableRemitenteAsync()

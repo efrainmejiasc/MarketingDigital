@@ -27,7 +27,7 @@ namespace MarketingDigitalDesktop.Forms
 
         private void ListaCarpeta_Load(object sender, EventArgs e)
         {
-            SetTableCarpetaAsync();
+            _ = SetTableCarpetaAsync();
         }
         public async Task SetTableCarpetaAsync()
         {
@@ -49,7 +49,7 @@ namespace MarketingDigitalDesktop.Forms
 
             DataGridViewRow row = dgv.CurrentRow;
             var id = Convert.ToInt32(row.Cells["ID"].Value);
-            NuevaListaContactos(textBox1.Text,id);
+            _ = NuevaListaContactos(textBox1.Text, id);
         }
   
         public async Task NuevaListaContactos(string nombreLista , int idCarpeta)
