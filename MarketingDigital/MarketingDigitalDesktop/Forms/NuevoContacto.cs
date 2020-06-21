@@ -89,6 +89,10 @@ namespace MarketingDigitalDesktop.Forms
             DataGridViewRow row = dgv2.CurrentRow;
             var id = Convert.ToInt32(row.Cells["ID"].Value);
             CreateAddContactAsync(name.Text, lastName.Text, email.Text, phone.Text, id);
+            name.Text = string.Empty;
+            lastName.Text = string.Empty;
+            email.Text = string.Empty;
+            phone.Text = string.Empty;
         }
 
         private async Task CreateAddContactAsync(string name, string lastName, string email,string phone,int id)
@@ -98,7 +102,7 @@ namespace MarketingDigitalDesktop.Forms
             if (!result)
                 MessageBox.Show("CONTACTO CREADO CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("CREACION DE CONTACTO FALLIDA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CREACION DE CONTACTO FALLIDA, PUEDE QUE EL CONTACTO YA EXISTA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
