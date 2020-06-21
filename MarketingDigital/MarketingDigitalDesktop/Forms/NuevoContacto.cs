@@ -79,6 +79,15 @@ namespace MarketingDigitalDesktop.Forms
                 MessageBox.Show("DEBE SELECCIONAR UNA LISTA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (string.IsNullOrEmpty(name.Text)|| string.IsNullOrEmpty(lastName.Text)|| string.IsNullOrEmpty(email.Text))
+            {
+                MessageBox.Show("NOMBRE, APELLIDO, EMAIL SON REQUERIDOS", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataGridViewRow row = dgv2.CurrentRow;
+            var id = Convert.ToInt32(row.Cells["ID"].Value);
         }
     }
 }

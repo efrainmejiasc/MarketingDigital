@@ -37,5 +37,34 @@ namespace MarketingDigitalBCS.EngineClass
             };
             return JsonConvert.SerializeObject(model);
         }
+
+        public string SerializerDataNewContact(string email, string name, string surname, string phoneNumber, int idList, bool updateEnable) 
+        {
+            var dataContact = new CreateContactModel()
+            {
+                email = email,
+                updateEnabled = updateEnable,
+                attributes = new CreateContactModel.Attributes()
+                {
+                    NOMBRE = name,
+                    SURNAME = surname,
+                    SMS = phoneNumber
+                },
+                listIds = new List<int>()
+                {
+                   idList
+                }
+            };
+            return JsonConvert.SerializeObject(dataContact);
+        }
+
+        public string SerializerDataAddContact(string email) 
+        {
+            var dataContact = new AddContactModel();
+            string resultado = string.Empty;
+            dataContact.emails = new List<string>();
+            dataContact.emails.Add(email.Replace("400", ""));
+            return  JsonConvert.SerializeObject(dataContact);
+        }
     }
 }
