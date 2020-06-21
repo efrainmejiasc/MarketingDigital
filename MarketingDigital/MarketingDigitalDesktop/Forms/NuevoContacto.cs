@@ -88,6 +88,17 @@ namespace MarketingDigitalDesktop.Forms
 
             DataGridViewRow row = dgv2.CurrentRow;
             var id = Convert.ToInt32(row.Cells["ID"].Value);
+            CreateAddContactAsync(name.Text, lastName.Text, email.Text, phone.Text, id);
+        }
+
+        private async Task CreateAddContactAsync(string name, string lastName, string email,string phone,int id)
+        {
+            var procesador = new Procesador();
+            bool result = await  procesador.CrearAgregarContactoAsync(name, lastName, email, phone, id, false);
+            if (!result)
+                MessageBox.Show("CONTACTO CREADO CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("CREACION DE CONTACTO FALLIDA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

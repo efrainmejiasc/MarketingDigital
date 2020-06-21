@@ -6,4 +6,3 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.dll
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.pdb
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.csprojAssemblyReference.cache

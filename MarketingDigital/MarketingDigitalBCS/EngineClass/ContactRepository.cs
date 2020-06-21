@@ -1,4 +1,5 @@
 ﻿
+using MarketingDigitalBCS.EngineClass.Interfaces;
 using MarketingDigitalBCS.Response;
 using Newtonsoft.Json;
 using System;
@@ -10,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace MarketingDigitalBCS.EngineClass
 {
-    public class ContactRepository
+    public class ContactRepository : IContactRepository
     {
-        public async Task<bool> CreateContact(string email, string name, string surname, string phoneNumber, int idList, bool updateEnable)
+        public async Task<bool> CreateAddContactAsync( string name, string surname, string email, string phoneNumber, int idList, bool updateEnable)
         {
             var serializeModel = new SerializeModel();
             string dataContact = string.Empty;

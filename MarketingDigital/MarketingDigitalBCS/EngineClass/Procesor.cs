@@ -15,6 +15,7 @@ namespace MarketingDigitalBCS.EngineClass
         private readonly ISerializeModel serializeModel;
         private readonly IFolderRepository folderRepository;
         private readonly IListRepository listRepository;
+        private readonly IContactRepository contactRepository;
 
         #region CONSTRUCTORES
 
@@ -36,6 +37,11 @@ namespace MarketingDigitalBCS.EngineClass
         public Procesor(IFolderRepository _folderRepository)
         {
             folderRepository = _folderRepository;
+        }
+
+        public Procesor(IContactRepository _contactRepository)
+        {
+            contactRepository = _contactRepository;
         }
 
         public Procesor(ISerializeModel _serializeModel ,ISenderRepository _senderRepository)
@@ -98,6 +104,11 @@ namespace MarketingDigitalBCS.EngineClass
         public async Task<SBRecoverListInFolder> GetRecoverListInFolder(string idFolder)
         {
             return await listRepository.GetRecoverListInFolder(idFolder);
+        }
+
+        public async Task<bool> CreateAddContactAsync(string name, string lastName, string email, string phone , int idLista,bool updateEnable)
+        {
+           return  await contactRepository.CreateAddContactAsync(name, lastName, email, phone, idLista, updateEnable);
         }
 
     }

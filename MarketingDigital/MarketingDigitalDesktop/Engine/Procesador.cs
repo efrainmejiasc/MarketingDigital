@@ -57,5 +57,12 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.GetRecoverListInFolder(idCarpeta);
         }
 
+        public async Task<bool> CrearAgregarContactoAsync(string name, string lastName, string email, string phone, int idLista, bool updateEnable)
+        {
+            var contactRepository = new ContactRepository();
+            var procesor = new Procesor(contactRepository);
+            return await procesor.CreateAddContactAsync(name, lastName, email, phone, idLista, updateEnable);
+        }
+
     }
 }
