@@ -68,7 +68,8 @@ namespace MarketingDigitalDesktop
 
         private void nuevaCampañaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevoCampaña nuevoCampaña = new NuevoCampaña();
+            var tool = new Tool();
+            NuevoCampaña nuevoCampaña = new NuevoCampaña(tool);
             nuevoCampaña.ShowDialog();
         }
     }

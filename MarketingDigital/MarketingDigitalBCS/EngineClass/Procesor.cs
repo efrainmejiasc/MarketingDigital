@@ -1,5 +1,6 @@
 ﻿using MarketingDigitalBCS.EngineClass.Interfaces;
 using MarketingDigitalBCS.Response;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,6 +17,7 @@ namespace MarketingDigitalBCS.EngineClass
         private readonly IFolderRepository folderRepository;
         private readonly IListRepository listRepository;
         private readonly IContactRepository contactRepository;
+        private readonly ICampanaEmailRepository campanaEmailRepository;
 
         #region CONSTRUCTORES
 
@@ -42,6 +44,11 @@ namespace MarketingDigitalBCS.EngineClass
         public Procesor(IContactRepository _contactRepository)
         {
             contactRepository = _contactRepository;
+        }
+
+        public Procesor(ISerializeModel _serializeModel, ICampanaEmailRepository _campanaEmailRepository)
+        {
+            campanaEmailRepository = _campanaEmailRepository;
         }
 
         public Procesor(ISerializeModel _serializeModel ,ISenderRepository _senderRepository)
@@ -114,6 +121,13 @@ namespace MarketingDigitalBCS.EngineClass
         public async Task<SBResponseContactInList> GetContactInList(string idLista)
         {
            return await contactRepository.GetContactInList(idLista);
+        }
+
+        public async Task<bool> CreateNewEmailCampaing (string tag, string nameSender, string emailSender, string nameCampaing, string htmlCode, string subject)
+        {
+            var jsonContent = serializeModel.SerializerDataNewEmailCampaing(tag, nameSender, emailSender, nameCampaing, htmlCode, subject);
+            var result = await campanaEmailRepository.CreateEmailCampana(jsonContent);
+            return result.exception;
         }
 
     }

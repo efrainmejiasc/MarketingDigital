@@ -92,5 +92,17 @@ namespace MarketingDigitalDesktop.Engine
             }
             return dt;
         }
+
+        public ComboBox SetListaRemitente (ComboBox cmb, SBRecoverSender listRemitentes)
+        {
+            cmb.Items.Clear();
+            var status = string.Empty;
+            foreach (var item in listRemitentes.senders)
+            {
+                if (item.active)
+                    cmb.Items.Add(item.email);
+            }
+            return cmb;
+        }
     }
 }

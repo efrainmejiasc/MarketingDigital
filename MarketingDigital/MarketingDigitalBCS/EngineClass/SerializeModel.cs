@@ -66,5 +66,23 @@ namespace MarketingDigitalBCS.EngineClass
             dataContact.emails.Add(email.Replace("400", ""));
             return  JsonConvert.SerializeObject(dataContact);
         }
+
+        public string SerializerDataNewEmailCampaing(string tag, string nameSender, string emailSender, string nameCampaing, string htmlCode, string subject)  
+        {
+            var dataCampaing = new CreateEmailCampanaModel()
+            {
+                tag = tag,
+                sender = new CreateEmailCampanaModel.Sender()
+                {
+                    name = nameSender,
+                    email = emailSender
+                },
+                name = nameCampaing,
+                htmlContent = htmlCode,
+                subject = subject,
+                inlineImageActivation = true,
+            };
+            return  JsonConvert.SerializeObject(dataCampaing);
+        }
     }
 }

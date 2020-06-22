@@ -17,5 +17,6 @@ namespace MarketingDigitalDesktop.Engine.Interfaces
         DataTable SetTableRemitente(SBRecoverSender listRemitentes);
         DataTable SetTableContactos(SBResponseContactInList contactList);
         DataTable SetTableListInFolder(SBRecoverListInFolder listFolders);
+        ComboBox SetListaRemitente(ComboBox cmb, SBRecoverSender listRemitentes);
     }
 }

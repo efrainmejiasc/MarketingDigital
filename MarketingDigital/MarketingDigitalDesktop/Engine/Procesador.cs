@@ -71,5 +71,13 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.GetContactInList(idLista);
         }
 
+        public async Task<bool> CrearNuevaCampanaEmailAsync(string tag, string nameSender, string emailSender, string nameCampaing, string htmlContent, string subject)
+        {
+            var campanaEmailRepository = new CampanaEmailRepository();
+            var serializeModel = new SerializeModel();
+            var procesor = new Procesor(serializeModel ,campanaEmailRepository);
+            return await procesor.CreateNewEmailCampaing(tag,nameSender,emailSender,nameCampaing,htmlContent,subject);
+        }
+
     }
 }
