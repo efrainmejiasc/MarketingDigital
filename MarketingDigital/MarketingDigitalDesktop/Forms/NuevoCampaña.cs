@@ -104,11 +104,19 @@ namespace MarketingDigitalDesktop.Forms
             {
 
             }
+            _ = CrearNuevaCampanaAsync(contenido);
         }
 
-        private void CrearCampana(string contenido)
+        private async Task CrearNuevaCampanaAsync(string contenido)
         {
+            var procesador = new Procesador();
+            bool result = await procesador.CrearNuevaCampanaEmailAsync(tag.Text, remitente.name, remitente.email, campana.Text, contenido, subject.Text);
+            if (!result)
+                MessageBox.Show("CAMPAÑA CREADA CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("CREACION DE CAMPAÑA FALLIDA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            Limpiar();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -118,11 +126,14 @@ namespace MarketingDigitalDesktop.Forms
 
         private void Limpiar()
         {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox3.Text = string.Empty;
+            campana.Text = string.Empty;
+            tag.Text = string.Empty;
+            subject.Text = string.Empty;
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
-        }
+            listaRemitentes = new SBRecoverSender();
+            remitente = new SBRecoverSender.Sender();
+            tipo = string.Empty;
+         }
     }
 }

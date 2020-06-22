@@ -48,6 +48,7 @@ namespace MarketingDigitalBCS.EngineClass
 
         public Procesor(ISerializeModel _serializeModel, ICampanaEmailRepository _campanaEmailRepository)
         {
+            serializeModel = _serializeModel;
             campanaEmailRepository = _campanaEmailRepository;
         }
 

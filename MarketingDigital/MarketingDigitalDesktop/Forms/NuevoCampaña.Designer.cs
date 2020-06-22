@@ -33,9 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.campana = new System.Windows.Forms.TextBox();
+            this.tag = new System.Windows.Forms.TextBox();
+            this.subject = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -91,26 +91,26 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Tipo de Mensaje";
             // 
-            // textBox1
+            // campana
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 0;
+            this.campana.Location = new System.Drawing.Point(134, 22);
+            this.campana.Name = "campana";
+            this.campana.Size = new System.Drawing.Size(182, 20);
+            this.campana.TabIndex = 0;
             // 
-            // textBox2
+            // tag
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 20);
-            this.textBox2.TabIndex = 1;
+            this.tag.Location = new System.Drawing.Point(134, 53);
+            this.tag.Name = "tag";
+            this.tag.Size = new System.Drawing.Size(182, 20);
+            this.tag.TabIndex = 1;
             // 
-            // textBox3
+            // subject
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(497, 20);
-            this.textBox3.TabIndex = 3;
+            this.subject.Location = new System.Drawing.Point(134, 115);
+            this.subject.Name = "subject";
+            this.subject.Size = new System.Drawing.Size(497, 20);
+            this.subject.TabIndex = 3;
             // 
             // comboBox1
             // 
@@ -195,9 +195,9 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.subject);
+            this.Controls.Add(this.tag);
+            this.Controls.Add(this.campana);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -219,9 +219,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox campana;
+        private System.Windows.Forms.TextBox tag;
+        private System.Windows.Forms.TextBox subject;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
