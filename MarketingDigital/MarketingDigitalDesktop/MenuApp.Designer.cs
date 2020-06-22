@@ -38,6 +38,10 @@
             this.nuevaListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verContactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marketingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +51,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.remitenteToolStripMenuItem,
             this.carpetasToolStripMenuItem,
-            this.contactosToolStripMenuItem});
+            this.contactosToolStripMenuItem,
+            this.marketingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -111,7 +116,8 @@
             // contactosToolStripMenuItem
             // 
             this.contactosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoContactoToolStripMenuItem});
+            this.nuevoContactoToolStripMenuItem,
+            this.verContactosToolStripMenuItem});
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
             this.contactosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.contactosToolStripMenuItem.Text = "Contactos";
@@ -122,6 +128,35 @@
             this.nuevoContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoContactoToolStripMenuItem.Text = "Nuevo Contacto";
             this.nuevoContactoToolStripMenuItem.Click += new System.EventHandler(this.nuevoContactoToolStripMenuItem_Click);
+            // 
+            // verContactosToolStripMenuItem
+            // 
+            this.verContactosToolStripMenuItem.Name = "verContactosToolStripMenuItem";
+            this.verContactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verContactosToolStripMenuItem.Text = "Ver Contactos";
+            this.verContactosToolStripMenuItem.Click += new System.EventHandler(this.verContactosToolStripMenuItem_Click);
+            // 
+            // marketingToolStripMenuItem
+            // 
+            this.marketingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaCampañaToolStripMenuItem,
+            this.enviarCampañaToolStripMenuItem});
+            this.marketingToolStripMenuItem.Name = "marketingToolStripMenuItem";
+            this.marketingToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.marketingToolStripMenuItem.Text = "Marketing";
+            // 
+            // nuevaCampañaToolStripMenuItem
+            // 
+            this.nuevaCampañaToolStripMenuItem.Name = "nuevaCampañaToolStripMenuItem";
+            this.nuevaCampañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaCampañaToolStripMenuItem.Text = "Nueva Campaña";
+            this.nuevaCampañaToolStripMenuItem.Click += new System.EventHandler(this.nuevaCampañaToolStripMenuItem_Click);
+            // 
+            // enviarCampañaToolStripMenuItem
+            // 
+            this.enviarCampañaToolStripMenuItem.Name = "enviarCampañaToolStripMenuItem";
+            this.enviarCampañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarCampañaToolStripMenuItem.Text = "Enviar Campaña";
             // 
             // MenuApp
             // 
@@ -152,6 +187,10 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaListaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoContactoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verContactosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marketingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevaCampañaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enviarCampañaToolStripMenuItem;
     }
 }
 

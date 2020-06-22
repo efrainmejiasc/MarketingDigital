@@ -64,5 +64,12 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.CreateAddContactAsync(name, lastName, email, phone, idLista, updateEnable);
         }
 
+        public async Task<SBResponseContactInList> ObtenerContactoEnLista(string idLista)
+        {
+            var contactRepository = new ContactRepository();
+            var procesor = new Procesor(contactRepository);
+            return await procesor.GetContactInList(idLista);
+        }
+
     }
 }

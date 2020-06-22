@@ -33,7 +33,8 @@ namespace MarketingDigitalDesktop.Forms
         {
             _ = SetTableCarpetaAsync();
         }
-        public async Task SetTableCarpetaAsync()
+
+        private async Task SetTableCarpetaAsync()
         {
             var procesador = new Procesador();
             var listaCarpetas = await procesador.ObtenerListaCarpetasAsync();
@@ -42,7 +43,6 @@ namespace MarketingDigitalDesktop.Forms
             dgv1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv1.ClearSelection();
         }
-
 
         private void dgv1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -87,6 +87,12 @@ namespace MarketingDigitalDesktop.Forms
                 MessageBox.Show("NOMBRE, APELLIDO, EMAIL SON REQUERIDOS", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            var procesador = new Procesador();
+            if (!procesador.EmailValido(email.Text))
+            {
+                MessageBox.Show("EMAIL NO VALIDO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             DataGridViewRow row = dgv2.CurrentRow;
             idLista = Convert.ToInt32(row.Cells["ID"].Value);
@@ -123,6 +129,19 @@ namespace MarketingDigitalDesktop.Forms
             lastName.Text = string.Empty;
             email.Text = string.Empty;
             phone.Text = string.Empty;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dgv2.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("DEBE SELECCIONAR UNA LISTA", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DataGridViewRow row = dgv2.CurrentRow;
+            var id = row.Cells["ID"].Value.ToString();
+            ContactInList contactInList = new ContactInList(tool,id);
+            contactInList.Show();
         }
     }
 }

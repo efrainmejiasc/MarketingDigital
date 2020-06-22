@@ -83,5 +83,25 @@ namespace MarketingDigitalBCS.EngineClass
             return response;
         }
 
+        public async Task<SBResponseContactInList> GetContactInList(string idLista)
+        {
+            var response = new SBResponseContactInList();
+            string respuesta = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverContactInList.Replace("ID",idLista));
+
+                if (request.IsSuccessStatusCode)
+                {
+                    respuesta = await request.Content.ReadAsStringAsync();
+                    response = JsonConvert.DeserializeObject<SBResponseContactInList>(respuesta);
+                }
+            }
+            return response;
+        }
+
     }
 }

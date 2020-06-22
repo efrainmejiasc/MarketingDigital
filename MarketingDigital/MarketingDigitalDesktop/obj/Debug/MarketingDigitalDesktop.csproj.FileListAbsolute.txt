@@ -115,3 +115,5 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.CopyComplete
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.pdb
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.ContactInList.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevoCampaña.resources

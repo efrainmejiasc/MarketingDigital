@@ -111,5 +111,10 @@ namespace MarketingDigitalBCS.EngineClass
            return  await contactRepository.CreateAddContactAsync(name, lastName, email, phone, idLista, updateEnable);
         }
 
+        public async Task<SBResponseContactInList> GetContactInList(string idLista)
+        {
+           return await contactRepository.GetContactInList(idLista);
+        }
+
     }
 }

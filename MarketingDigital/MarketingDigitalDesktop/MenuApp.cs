@@ -58,5 +58,18 @@ namespace MarketingDigitalDesktop
             NuevoContacto nuevoContacto = new NuevoContacto(tool);
             nuevoContacto.ShowDialog();
         }
+
+        private void verContactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tool = new Tool();
+            NuevoContacto nuevoContacto = new NuevoContacto(tool);
+            nuevoContacto.ShowDialog();
+        }
+
+        private void nuevaCampañaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoCampaña nuevoCampaña = new NuevoCampaña();
+            nuevoCampaña.ShowDialog();
+        }
     }
 }

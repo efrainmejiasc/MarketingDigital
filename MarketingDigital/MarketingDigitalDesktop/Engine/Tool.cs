@@ -76,5 +76,21 @@ namespace MarketingDigitalDesktop.Engine
             }
             return dgv;
         }
+
+        public DataTable SetTableContactos(SBResponseContactInList contactList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("NOMBRE");
+            dt.Columns.Add("APELLIDO");
+            dt.Columns.Add("EMAIL");
+            dt.Columns.Add("TELEFONO");
+
+            foreach (var item in contactList.contacts)
+            {
+                dt.Rows.Add(item.id,  item.attributes.NOMBRE,item.attributes.SURNAME , item.email, item.attributes.SMS);
+            }
+            return dt;
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="Engine\Interfaces\ITool.cs" />
     <Compile Include="Engine\Procesador.cs" />
     <Compile Include="Engine\Tool.cs" />
+    <Compile Include="Forms\ContactInList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactInList.Designer.cs">
+      <DependentUpon>ContactInList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ListaCarpeta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Forms\NuevaCarpeta.Designer.cs">
       <DependentUpon>NuevaCarpeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NuevoCampaña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NuevoCampaña.Designer.cs">
+      <DependentUpon>NuevoCampaña.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NuevoContacto.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ContactInList.resx">
+      <DependentUpon>ContactInList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListaCarpeta.resx">
       <DependentUpon>ListaCarpeta.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NuevaCarpeta.resx">
       <DependentUpon>NuevaCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NuevoCampaña.resx">
+      <DependentUpon>NuevoCampaña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NuevoContacto.resx">
       <DependentUpon>NuevoContacto.cs</DependentUpon>
