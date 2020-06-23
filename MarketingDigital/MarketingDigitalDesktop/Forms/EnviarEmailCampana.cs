@@ -81,11 +81,19 @@ namespace MarketingDigitalDesktop.Forms
             }
 
             DataGridViewRow row1 = dgv1.CurrentRow;
-            var idCampaing  = Convert.ToInt32(row1.Cells["ID"].Value);
+            var idCampaing  = row1.Cells["ID"].Value.ToString();
             DataGridViewRow row2 = dgv2.CurrentRow;
-            var idListg = Convert.ToInt32(row2.Cells["ID"].Value);
+            var idLista =row2.Cells["ID"].Value.ToString();
+
             var procesador = new Procesador();
-       
+            var listaContacto = await procesador.ObtenerContactoEnLista(idLista);
+            List<string> emailTo = listaContacto.contacts.Select(x => x.email).ToList();
+            bool result = await  procesador.SendEmailCampanaAsync(emailTo,idCampaing);
+            if (!result)
+                MessageBox.Show("CAMPAÑA ENVIADA CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("ENVIO FALLIDO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
     }

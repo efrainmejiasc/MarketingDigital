@@ -126,8 +126,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Texto",
-            "Plantilla HTML",
-            "Id Plantilla"});
+            "Plantilla HTML"});
             this.comboBox2.Location = new System.Drawing.Point(134, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(305, 21);
@@ -154,6 +153,7 @@
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Plantillas";
+            this.label6.Visible = false;
             // 
             // comboBox3
             // 
@@ -162,6 +162,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 12;
+            this.comboBox3.Visible = false;
             // 
             // button1
             // 

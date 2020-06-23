@@ -84,5 +84,14 @@ namespace MarketingDigitalBCS.EngineClass
             };
             return  JsonConvert.SerializeObject(dataCampaing);
         }
+
+        public string SerializeEmailTo(List<string> email)
+        {
+            var emailTo = new SendEmailCampanaModel()
+            {
+                emailTo = email
+            };
+            return JsonConvert.SerializeObject(emailTo);
+        }
     }
 }

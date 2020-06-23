@@ -146,5 +146,30 @@ namespace MarketingDigitalBCS.EngineClass
             return await listRepository.GetRecoverAllListContact();
         }
 
+        public async Task<bool> SendEmailCampaing (List<string> emailTo, string idCampaing)
+        {
+            var to = new List<string>();
+            var jsonContent = string.Empty;
+            bool result = false;
+            foreach(var email in emailTo)
+            {
+                try
+                {
+                    to.Clear();
+                    to.Add(email);
+                    jsonContent = serializeModel.SerializeEmailTo(to);
+                    result = await campanaEmailRepository.SendEmailCampana(jsonContent, idCampaing);
+                }
+                catch {}
+            }
+            return false;
+        }
+
+        public async Task<bool> SendEmailCampaing2(List<string> emailTo,string idCampaing)
+        {
+            var jsonContent = serializeModel.SerializeEmailTo(emailTo);
+            return await campanaEmailRepository.SendEmailCampana(jsonContent, idCampaing);
+        }
+
     }
 }

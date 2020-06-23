@@ -1,5 +1,6 @@
 ﻿using MarketingDigitalBCS.EngineClass;
 using MarketingDigitalBCS.Response;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
@@ -92,6 +93,14 @@ namespace MarketingDigitalDesktop.Engine
             var listRepository = new ListRepository();
             var procesor = new Procesor(listRepository);
             return await procesor.GetRecoverAllListContact();
+        }
+
+        public async Task<bool> SendEmailCampanaAsync(List<string> emailTo,string idCampaing)
+        {
+            var campanaEmailRepository = new CampanaEmailRepository();
+            var serializeModel = new SerializeModel();
+            var procesor = new Procesor(serializeModel, campanaEmailRepository);
+            return await procesor.SendEmailCampaing(emailTo,idCampaing);
         }
 
     }

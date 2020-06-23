@@ -7,6 +7,7 @@ namespace MarketingDigitalBCS.EngineClass.Interfaces
 {
     public interface ISerializeModel
     {
+        string SerializeEmailTo(List<string> email);
         string SerializeCreateNewFolder(string nombreCarpeta);
         string SerializeCreateNewSender(string nombre, string email);
         string SerializeCreateNewListContact(string nombreLista, int idCarpeta);
