@@ -37,5 +37,25 @@ namespace MarketingDigitalBCS.EngineClass
 
             return response;
         }
+
+        public async Task<SBRecoverEmailCampaing> GetRecoverAllCampanaEmail()
+        {
+            var response = new SBRecoverEmailCampaing();
+            string respuesta = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverEmailCampaing);
+
+                if (request.IsSuccessStatusCode)
+                {
+                    respuesta = await request.Content.ReadAsStringAsync();
+                    response = JsonConvert.DeserializeObject<SBRecoverEmailCampaing>(respuesta);
+                }
+            }
+            return response;
+        }
     }
 }

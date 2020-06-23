@@ -9,6 +9,7 @@ namespace MarketingDigitalBCS.EngineClass.Interfaces
     public interface IListRepository
     {
         Task<SBRecoverList> GetRecoverList();
+        Task<SBRecoverList> GetRecoverAllListContact();
         Task<SBResponse> CreateNewList(string jsonContent);
         Task<SBRecoverListInFolder> GetRecoverListInFolder(string id);
     }

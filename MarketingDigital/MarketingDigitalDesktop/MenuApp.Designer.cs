@@ -125,14 +125,14 @@
             // nuevoContactoToolStripMenuItem
             // 
             this.nuevoContactoToolStripMenuItem.Name = "nuevoContactoToolStripMenuItem";
-            this.nuevoContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoContactoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.nuevoContactoToolStripMenuItem.Text = "Nuevo Contacto";
             this.nuevoContactoToolStripMenuItem.Click += new System.EventHandler(this.nuevoContactoToolStripMenuItem_Click);
             // 
             // verContactosToolStripMenuItem
             // 
             this.verContactosToolStripMenuItem.Name = "verContactosToolStripMenuItem";
-            this.verContactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verContactosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.verContactosToolStripMenuItem.Text = "Ver Contactos";
             this.verContactosToolStripMenuItem.Click += new System.EventHandler(this.verContactosToolStripMenuItem_Click);
             // 
@@ -157,6 +157,7 @@
             this.enviarCampañaToolStripMenuItem.Name = "enviarCampañaToolStripMenuItem";
             this.enviarCampañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enviarCampañaToolStripMenuItem.Text = "Enviar Campaña";
+            this.enviarCampañaToolStripMenuItem.Click += new System.EventHandler(this.enviarCampañaToolStripMenuItem_Click);
             // 
             // MenuApp
             // 

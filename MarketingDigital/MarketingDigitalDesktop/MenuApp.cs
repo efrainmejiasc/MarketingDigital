@@ -72,5 +72,12 @@ namespace MarketingDigitalDesktop
             NuevoCampaña nuevoCampaña = new NuevoCampaña(tool);
             nuevoCampaña.ShowDialog();
         }
+
+        private void enviarCampañaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tool = new Tool();
+            EnviarEmailCampana enviarEmailCampana = new EnviarEmailCampana(tool);
+            enviarEmailCampana.ShowDialog();
+        }
     }
 }

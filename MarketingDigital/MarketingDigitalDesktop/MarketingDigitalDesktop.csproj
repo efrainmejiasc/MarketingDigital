@@ -58,6 +58,12 @@
     <Compile Include="Forms\ContactInList.Designer.cs">
       <DependentUpon>ContactInList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EnviarEmailCampana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EnviarEmailCampana.Designer.cs">
+      <DependentUpon>EnviarEmailCampana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ListaCarpeta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ContactInList.resx">
       <DependentUpon>ContactInList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnviarEmailCampana.resx">
+      <DependentUpon>EnviarEmailCampana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListaCarpeta.resx">
       <DependentUpon>ListaCarpeta.cs</DependentUpon>

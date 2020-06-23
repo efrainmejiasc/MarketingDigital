@@ -104,5 +104,37 @@ namespace MarketingDigitalDesktop.Engine
             }
             return cmb;
         }
+
+
+        public DataTable SetTableCampanasEmail (SBRecoverEmailCampaing listCampanasEmail)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("NOMBRE");
+            dt.Columns.Add("ETIQUETA");
+            dt.Columns.Add("ASUNTO");
+
+            foreach (var item in listCampanasEmail.campaigns)
+            {
+                dt.Rows.Add(item.id, item.name, item.tag,item.subject);
+            }
+            return dt;
+        }
+
+        public DataTable SetTableListEmail(SBRecoverList listaContacto)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("NOMBRE");
+            dt.Columns.Add("ID_CARPETA");
+            dt.Columns.Add("SUBCRISTORES");
+
+
+            foreach (var item in listaContacto.lists)
+            {
+                dt.Rows.Add(item.id, item.name, item.folderId, item.totalSubscribers);
+            }
+            return dt;
+        }
     }
 }

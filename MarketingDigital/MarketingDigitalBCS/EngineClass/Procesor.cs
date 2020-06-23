@@ -46,6 +46,11 @@ namespace MarketingDigitalBCS.EngineClass
             contactRepository = _contactRepository;
         }
 
+        public Procesor(ICampanaEmailRepository _campanaEmailRepository)
+        {
+            campanaEmailRepository = _campanaEmailRepository;
+        }
+
         public Procesor(ISerializeModel _serializeModel, ICampanaEmailRepository _campanaEmailRepository)
         {
             serializeModel = _serializeModel;
@@ -129,6 +134,16 @@ namespace MarketingDigitalBCS.EngineClass
             var jsonContent = serializeModel.SerializerDataNewEmailCampaing(tag, nameSender, emailSender, nameCampaing, htmlCode, subject);
             var result = await campanaEmailRepository.CreateEmailCampana(jsonContent);
             return result.exception;
+        }
+
+        public async Task<SBRecoverEmailCampaing> GetRecoverAllCampanaEmail()
+        {
+            return await campanaEmailRepository.GetRecoverAllCampanaEmail();
+        }
+
+        public async Task<SBRecoverList> GetRecoverAllListContact()
+        {
+            return await listRepository.GetRecoverAllListContact();
         }
 
     }

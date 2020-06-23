@@ -20,7 +20,7 @@ namespace MarketingDigitalBCS.EngineClass
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("api-key",AppConfiguration.SbApiKey);
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
                 HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverList);
 
                 if (request.IsSuccessStatusCode)
@@ -52,9 +52,29 @@ namespace MarketingDigitalBCS.EngineClass
             return response;
         }
 
+        public async Task<SBRecoverList> GetRecoverAllListContact()
+        {
+            var response = new SBRecoverList();
+            string respuesta = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.GetAsync(AppConfiguration.EndPointRecoverList);
+
+                if (request.IsSuccessStatusCode)
+                {
+                    respuesta = await request.Content.ReadAsStringAsync();
+                    response = JsonConvert.DeserializeObject<SBRecoverList>(respuesta);
+                }
+            }
+            return response;
+        }
+
         public async Task<SBRecoverListInFolder> GetRecoverListInFolder(string id)
         {
-             var response = new SBRecoverListInFolder();
+            var response = new SBRecoverListInFolder();
             string respuesta = string.Empty;
             using (HttpClient client = new HttpClient())
             {
