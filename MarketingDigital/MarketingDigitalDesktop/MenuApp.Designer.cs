@@ -42,6 +42,7 @@
             this.marketingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             this.remitenteToolStripMenuItem,
             this.carpetasToolStripMenuItem,
             this.contactosToolStripMenuItem,
-            this.marketingToolStripMenuItem});
+            this.marketingToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -148,16 +150,23 @@
             // nuevaCampañaToolStripMenuItem
             // 
             this.nuevaCampañaToolStripMenuItem.Name = "nuevaCampañaToolStripMenuItem";
-            this.nuevaCampañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaCampañaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.nuevaCampañaToolStripMenuItem.Text = "Nueva Campaña";
             this.nuevaCampañaToolStripMenuItem.Click += new System.EventHandler(this.nuevaCampañaToolStripMenuItem_Click);
             // 
             // enviarCampañaToolStripMenuItem
             // 
             this.enviarCampañaToolStripMenuItem.Name = "enviarCampañaToolStripMenuItem";
-            this.enviarCampañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarCampañaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.enviarCampañaToolStripMenuItem.Text = "Enviar Campaña";
             this.enviarCampañaToolStripMenuItem.Click += new System.EventHandler(this.enviarCampañaToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda ";
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // MenuApp
             // 
@@ -192,6 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem marketingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaCampañaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enviarCampañaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
     }
 }
 

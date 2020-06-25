@@ -103,9 +103,14 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csprojAssemblyReference.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe.config
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.Ayuda.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.ContactInList.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.EnviarEmailCampana.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.EnviarEmailTransaccional.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.ListaCarpeta.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.ListaRemitente.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevaCarpeta.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevoCampaña.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevoContacto.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevoRemitente.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.MenuApp.resources
@@ -115,6 +120,8 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.CopyComplete
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.pdb
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.ContactInList.resources
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.NuevoCampaña.resources
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Forms.EnviarEmailCampana.resources
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.exe.manifest
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.application
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.TrustInfo.xml
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe.manifest
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.application

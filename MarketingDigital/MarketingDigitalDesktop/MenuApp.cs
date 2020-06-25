@@ -79,5 +79,11 @@ namespace MarketingDigitalDesktop
             EnviarEmailCampana enviarEmailCampana = new EnviarEmailCampana(tool);
             enviarEmailCampana.ShowDialog();
         }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ayuda ayuda = new Ayuda();
+            ayuda.ShowDialog();
+        }
     }
 }

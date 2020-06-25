@@ -29,10 +29,6 @@ namespace MarketingDigitalDesktop.Forms
 
         private void ListaRemitente_Load(object sender, EventArgs e)
         {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             _ = SetTableRemitenteAsync();
         }
 
@@ -52,5 +48,10 @@ namespace MarketingDigitalDesktop.Forms
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.ClearSelection();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

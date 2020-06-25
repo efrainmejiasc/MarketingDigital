@@ -67,6 +67,7 @@ namespace MarketingDigitalDesktop.Forms
             else if (tipo == "Plantilla HTML")
             {
                 this.openFileDialog1.FileName = string.Empty;
+                this.openFileDialog1.Multiselect = false;
                 this.openFileDialog1.Filter = "Archivo HTML (*.html)|*.html";
                 this.openFileDialog1.Title = "Buscar lista";
                 this.openFileDialog1.ShowDialog();
