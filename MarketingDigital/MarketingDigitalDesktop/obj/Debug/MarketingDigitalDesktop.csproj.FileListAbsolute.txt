@@ -1,4 +1,6 @@
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.exe.config
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.exe.manifest
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.application
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.exe
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.pdb
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\Microsoft.Win32.Primitives.dll
@@ -117,11 +119,9 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.Properties.Resources.resources
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.GenerateResource.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.CopyComplete
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.pdb
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.exe.manifest
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\bin\Debug\MarketingDigitalDesktop.application
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.TrustInfo.xml
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe.manifest
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.application
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.csproj.CopyComplete
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.exe
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalDesktop\obj\Debug\MarketingDigitalDesktop.pdb
