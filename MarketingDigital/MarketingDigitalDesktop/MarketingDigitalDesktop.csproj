@@ -101,6 +101,12 @@
     <Compile Include="Forms\Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AyudaImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AyudaImagen.Designer.cs">
+      <DependentUpon>AyudaImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ContactInList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="Forms\Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AyudaImagen.resx">
+      <DependentUpon>AyudaImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContactInList.resx">
       <DependentUpon>ContactInList.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +213,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Ayuda.docx" />
     <None Include="MarketingDigitalDesktop_TemporaryKey.pfx" />
@@ -242,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayuda.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
