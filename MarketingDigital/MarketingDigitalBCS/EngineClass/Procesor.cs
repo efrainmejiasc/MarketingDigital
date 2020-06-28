@@ -85,7 +85,7 @@ namespace MarketingDigitalBCS.EngineClass
 
         public async Task<bool> CreateNewSenderAsync(string nombre , string email)
         {
-            var jsonContent = serializeModel.SerializeCreateNewSender(nombre, email);
+            var jsonContent = serializeModel.SerializeCreateNewSender(nombre, email.ToLower());
             var result = await senderRepository.CreateNewSender(jsonContent);
             return result.exception;
         }
@@ -121,7 +121,7 @@ namespace MarketingDigitalBCS.EngineClass
 
         public async Task<bool> CreateAddContactAsync(string name, string lastName, string email, string phone , int idLista,bool updateEnable)
         {
-           return  await contactRepository.CreateAddContactAsync(name, lastName, email, phone, idLista, updateEnable);
+           return  await contactRepository.CreateAddContactAsync(name, lastName, email.ToLower(), phone, idLista, updateEnable);
         }
 
         public async Task<SBResponseContactInList> GetContactInList(string idLista)
