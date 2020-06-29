@@ -103,5 +103,12 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.SendEmailCampaing(emailTo,idCampaing);
         }
 
+        public async Task<SBResponseAllContacts> ObtenerAllContacts()
+        {
+            var contactRepository = new ContactRepository();
+            var procesor = new Procesor(contactRepository);
+            return await procesor.GetResponseAllContacts();
+        }
+
     }
 }

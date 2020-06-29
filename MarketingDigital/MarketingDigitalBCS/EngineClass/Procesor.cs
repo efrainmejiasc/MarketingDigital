@@ -171,5 +171,10 @@ namespace MarketingDigitalBCS.EngineClass
             return await campanaEmailRepository.SendEmailCampana(jsonContent, idCampaing);
         }
 
+        public async Task<SBResponseAllContacts> GetResponseAllContacts()
+        {
+            return await contactRepository.GetAllContacts();
+        }
+
     }
 }

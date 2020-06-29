@@ -85,5 +85,19 @@ namespace MarketingDigitalDesktop
             AyudaImagen ayuda = new AyudaImagen();
             ayuda.ShowDialog();
         }
+
+        private void actualizarContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tool = new Tool();
+            DeleteUpdateContact contact = new DeleteUpdateContact(tool);
+            contact.ShowDialog();
+        }
+
+        private void eliminarContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tool = new Tool();
+            DeleteUpdateContact contact = new DeleteUpdateContact(tool);
+            contact.ShowDialog();
+        }
     }
 }

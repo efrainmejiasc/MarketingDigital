@@ -43,6 +43,8 @@
             this.nuevaCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +121,9 @@
             // 
             this.contactosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoContactoToolStripMenuItem,
-            this.verContactosToolStripMenuItem});
+            this.verContactosToolStripMenuItem,
+            this.actualizarContactoToolStripMenuItem,
+            this.eliminarContactoToolStripMenuItem});
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
             this.contactosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.contactosToolStripMenuItem.Text = "Contactos";
@@ -127,14 +131,14 @@
             // nuevoContactoToolStripMenuItem
             // 
             this.nuevoContactoToolStripMenuItem.Name = "nuevoContactoToolStripMenuItem";
-            this.nuevoContactoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.nuevoContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoContactoToolStripMenuItem.Text = "Nuevo Contacto";
             this.nuevoContactoToolStripMenuItem.Click += new System.EventHandler(this.nuevoContactoToolStripMenuItem_Click);
             // 
             // verContactosToolStripMenuItem
             // 
             this.verContactosToolStripMenuItem.Name = "verContactosToolStripMenuItem";
-            this.verContactosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.verContactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verContactosToolStripMenuItem.Text = "Ver Contactos";
             this.verContactosToolStripMenuItem.Click += new System.EventHandler(this.verContactosToolStripMenuItem_Click);
             // 
@@ -167,6 +171,20 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda ";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
+            // 
+            // eliminarContactoToolStripMenuItem
+            // 
+            this.eliminarContactoToolStripMenuItem.Name = "eliminarContactoToolStripMenuItem";
+            this.eliminarContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarContactoToolStripMenuItem.Text = "Eliminar Contacto";
+            this.eliminarContactoToolStripMenuItem.Click += new System.EventHandler(this.eliminarContactoToolStripMenuItem_Click);
+            // 
+            // actualizarContactoToolStripMenuItem
+            // 
+            this.actualizarContactoToolStripMenuItem.Name = "actualizarContactoToolStripMenuItem";
+            this.actualizarContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.actualizarContactoToolStripMenuItem.Text = "Actualizar Contacto";
+            this.actualizarContactoToolStripMenuItem.Click += new System.EventHandler(this.actualizarContactoToolStripMenuItem_Click);
             // 
             // MenuApp
             // 
@@ -202,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaCampañaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enviarCampañaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarContactoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarContactoToolStripMenuItem;
     }
 }
 

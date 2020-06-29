@@ -29,6 +29,8 @@ namespace MarketingDigitalBCS.EngineClass
 
         public static string EndPointRecoverContactInList = "https://api.sendinblue.com/v3/contacts/lists/ID/contacts";//Remplazar ID por id de la lista
 
+        public static string EndPointRecoverAllContacts = "https://api.sendinblue.com/v3/contacts";
+
         public static string EndPointGetInformationContact = "https://api.sendinblue.com/v3/contacts/EMAIL"; //Remplazar EMAIL por direccion de correo electronico(email)
 
         public static string EndPointAddContactToList = "https://api.sendinblue.com/v3/contacts/lists/ID/contacts/add"; //Remplazar ID por id de la lista

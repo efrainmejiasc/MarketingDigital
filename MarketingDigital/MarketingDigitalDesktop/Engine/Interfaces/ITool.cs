@@ -17,6 +17,7 @@ namespace MarketingDigitalDesktop.Engine.Interfaces
         DataGridView ColorFila(DataGridView dgv, Color a, Color b);
         DataTable SetTableRemitente(SBRecoverSender listRemitentes);
         DataTable SetTableContactos(SBResponseContactInList contactList);
+        DataTable SetTableAllContactos(SBResponseAllContacts contactList);
         DataTable SetTableListInFolder(SBRecoverListInFolder listFolders);
         ComboBox SetListaRemitente(ComboBox cmb, SBRecoverSender listRemitentes);
         DataTable SetTableCampanasEmail(SBRecoverEmailCampaing listCampanasEmail);
