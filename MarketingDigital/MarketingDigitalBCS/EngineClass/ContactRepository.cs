@@ -2,8 +2,10 @@
 using MarketingDigitalBCS.EngineClass.Interfaces;
 using MarketingDigitalBCS.Response;
 using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -121,6 +123,44 @@ namespace MarketingDigitalBCS.EngineClass
                 }
             }
             return response;
+        }
+
+        public async Task<bool> DeleteContact(string email)
+        {
+            bool result = true;
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("api-key", AppConfiguration.SbApiKey);
+                HttpResponseMessage request = await client.DeleteAsync(AppConfiguration.EndPointDeleteContact.Replace("EMAIL","email"));
+
+                if (request.IsSuccessStatusCode)
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
+
+        public async Task<bool> UpdateContact(string jsonContent, string email)
+        {
+            bool result = true;
+            var client = new RestClient(AppConfiguration.EndPointUpdateContact.Replace("EMAIL",email));
+            var request = new RestRequest(Method.PUT);
+
+           
+                request.AddHeader("accept", "application/json");
+                request.AddHeader("content-type", "application/json");
+                request.AddHeader("api-key", AppConfiguration.SbApiKey);
+                request.
+                IRestResponse response = await client.ExecuteAsync(request);
+                if (response.StatusCode.ToString() == "204")
+                {
+                    result = false;
+                }
+
+            return result;
         }
 
     }

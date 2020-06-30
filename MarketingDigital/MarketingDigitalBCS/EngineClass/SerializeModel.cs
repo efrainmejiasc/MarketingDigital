@@ -1,8 +1,10 @@
 ﻿using MarketingDigitalBCS.EngineClass.Interfaces;
 using MarketingDigitalBCS.Models;
+using MarketingDigitalBCS.Response;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 
 namespace MarketingDigitalBCS.EngineClass
@@ -92,6 +94,23 @@ namespace MarketingDigitalBCS.EngineClass
                 emailTo = email
             };
             return JsonConvert.SerializeObject(emailTo);
+        }
+
+        public string  SerializerDataUpdateContact(SBResponseAllContacts.Contacts contacto)
+        {
+            UpdateContactModel dataContact = new UpdateContactModel();
+            dataContact.attributes = new UpdateContactModel.Attributes();
+            dataContact.attributes.NOMBRE = contacto.attributes.NOMBRE;
+            dataContact.attributes.SURNAME = contacto.attributes.SURNAME;
+            if (!string.IsNullOrEmpty(contacto.attributes.SMS))
+                 dataContact.attributes.SMS = contacto.attributes.SMS;
+            else
+                dataContact.attributes.SMS = string.Empty;
+
+            dataContact.email = contacto.email;
+            dataContact.listIds = contacto.listIds;
+
+            return  JsonConvert.SerializeObject(dataContact);
         }
     }
 }

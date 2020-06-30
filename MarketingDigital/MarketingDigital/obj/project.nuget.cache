@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OA+vws8HZJ5k3i9g73IVOrKoMuYiWqUHxjkk18Ewsdo9pPacwD8Xo5oi0/S347f8YCYlKdRCcH9XM5wZ6tWbfQ==",
+  "dgSpecHash": "/2N5hw3wOCmrHGVJFVxcRq5ZgEb82lKiaqcK0HVl/Qt8ME0cZ3VDDQ22/vc5Q3nQSXHKQdryZz2K7qjqp3UdFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigital\\MarketingDigitalWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
   ],

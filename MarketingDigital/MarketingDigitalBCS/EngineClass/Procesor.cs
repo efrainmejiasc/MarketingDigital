@@ -1,4 +1,5 @@
 ﻿using MarketingDigitalBCS.EngineClass.Interfaces;
+using MarketingDigitalBCS.Models;
 using MarketingDigitalBCS.Response;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -43,6 +44,12 @@ namespace MarketingDigitalBCS.EngineClass
 
         public Procesor(IContactRepository _contactRepository)
         {
+            contactRepository = _contactRepository;
+        }
+
+        public Procesor(ISerializeModel _serializeModel, IContactRepository _contactRepository)
+        {
+            serializeModel = _serializeModel;
             contactRepository = _contactRepository;
         }
 
@@ -174,6 +181,18 @@ namespace MarketingDigitalBCS.EngineClass
         public async Task<SBResponseAllContacts> GetResponseAllContacts()
         {
             return await contactRepository.GetAllContacts();
+        }
+
+        public async Task<bool> DeleteContact(string email)
+        {
+            return await contactRepository.DeleteContact(email);
+        }
+
+        public async Task<bool> UpdateContact(string email , SBResponseAllContacts.Contacts contact )
+        {
+            var jsonContent = serializeModel.SerializerDataUpdateContact(contact);
+            bool result = await contactRepository.UpdateContact(jsonContent, email);
+            return result;
         }
 
     }

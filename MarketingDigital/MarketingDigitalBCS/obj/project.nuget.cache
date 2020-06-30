@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UiTcEdoILmelc7JYOma4O0kauycIYyh2+LUZIEZoFpORWRSHDV6xdejRI5cGxcVguHLlSnG/GgH5+q3zRY8/Mw==",
+  "dgSpecHash": "iJ5KfXXVG+05FUsnxnd2HNWIS5kLM/r0mUmhA2c2femFCW7J+FT+R1xyfYrAzvUMgcKfRecjZoymEwCbVMgCgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBCS\\MarketingDigitalBCS.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512"
   ],
   "logs": []
 }

@@ -110,5 +110,21 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.GetResponseAllContacts();
         }
 
+        public async Task<bool> DeleteContactAsync(string email)
+        {
+            var contactRepository = new ContactRepository();
+            var procesor = new Procesor(contactRepository);
+            return await procesor.DeleteContact(email);
+        }
+
+        public async Task<bool> UpdateContactAsync(string email, SBResponseAllContacts.Contacts contacto)
+        {
+            var contactRepository = new ContactRepository();
+            var serializeModel = new SerializeModel();
+            var procesor = new Procesor(serializeModel,contactRepository);
+            var result =  await procesor.UpdateContact(email,contacto);
+            return result;
+        }
+
     }
 }
