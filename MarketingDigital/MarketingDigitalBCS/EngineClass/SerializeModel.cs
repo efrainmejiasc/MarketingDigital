@@ -100,8 +100,8 @@ namespace MarketingDigitalBCS.EngineClass
         {
             UpdateContactModel dataContact = new UpdateContactModel();
             dataContact.attributes = new UpdateContactModel.Attributes();
-            /*dataContact.attributes.NOMBRE = contacto.attributes.NOMBRE;
-            dataContact.attributes.SURNAME = contacto.attributes.SURNAME;*/
+            dataContact.attributes.NOMBRE = contacto.attributes.NOMBRE;
+            dataContact.attributes.SURNAME = contacto.attributes.SURNAME;
             dataContact.attributes.Email = nuevoEmail;
             if (!string.IsNullOrEmpty(contacto.attributes.SMS))
                  dataContact.attributes.SMS = contacto.attributes.SMS;
@@ -110,6 +110,7 @@ namespace MarketingDigitalBCS.EngineClass
 
             dataContact.email = contacto.email;
             dataContact.listIds = new List<int>();
+            dataContact.listIds = contacto.listIds;
             dataContact.emailBlacklisted = false;
             dataContact.smsBlacklisted = false;
             dataContact.unlinkListIds = new List<int>();

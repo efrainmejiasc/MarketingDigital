@@ -102,23 +102,25 @@ namespace MarketingDigitalDesktop.Forms
                 MessageBox.Show("SELECCIONE UN CONTACTO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            else if (string.IsNullOrEmpty(nuevoemail.Text))
+            {
+                MessageBox.Show("DEBE INGRESAR NUEVO EMAIL", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (email == nuevoemail.Text)
+            {
+                MessageBox.Show("PARA ACTUALIZAR CONTACTO LOS EMAILS DEBEN SER DIFERENTES, DE LO CONTRARIO ELIMINE EL CONTACTO Y LUEGO CREAR NUEVO CONTACTO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             var procesador = new Procesador();
             string nuevoEmail = string.Empty;
-            if (!string.IsNullOrEmpty(nuevoemail.Text))
+            if (!procesador.EmailValido(nuevoemail.Text.ToLower()))
             {
-                if (!procesador.EmailValido(nuevoemail.Text.ToLower()))
-                {
-                    MessageBox.Show("EMAIL NO VALIDO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                nuevoEmail = nuevoemail.Text.ToLower();
+                MessageBox.Show("EMAIL NO VALIDO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
-            {
-               nuevoEmail = txtEmail.Text;
-            }
-
+            nuevoEmail = nuevoemail.Text.ToLower();
             dataContact.attributes.NOMBRE = txtNombre.Text;
             dataContact.attributes.SURNAME = txtApellido.Text;
             dataContact.attributes.SMS = txtTelefono.Text;

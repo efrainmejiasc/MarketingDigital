@@ -82,7 +82,7 @@ namespace MarketingDigitalDesktop
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AyudaImagen ayuda = new AyudaImagen();
+            Ayuda ayuda = new Ayuda();
             ayuda.ShowDialog();
         }
 

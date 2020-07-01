@@ -153,7 +153,7 @@ namespace MarketingDigitalBCS.EngineClass
             request.AddHeader("api-key", AppConfiguration.SbApiKey);
             request.AddJsonBody(jsonContent);
             IRestResponse response = await client.ExecuteAsync(request);
-            if (response.StatusCode.ToString() == "204")
+            if (response.IsSuccessful)
             {
                 result = false;
             }
