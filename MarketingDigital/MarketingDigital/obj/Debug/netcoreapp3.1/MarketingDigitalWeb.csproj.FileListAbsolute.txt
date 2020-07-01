@@ -21,3 +21,5 @@ C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigita
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigital\obj\Debug\netcoreapp3.1\MarketingDigitalWeb.pdb
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigital\obj\Debug\netcoreapp3.1\MarketingDigitalWeb.genruntimeconfig.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigital\obj\Debug\netcoreapp3.1\MarketingDigitalWeb.csprojAssemblyReference.cache
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigital\bin\Debug\netcoreapp3.1\MarketingDigitalBC.dll
+C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigital\bin\Debug\netcoreapp3.1\MarketingDigitalBC.pdb

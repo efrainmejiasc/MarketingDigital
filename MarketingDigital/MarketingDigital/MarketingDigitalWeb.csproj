@@ -10,7 +10,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="Views\Entorno\" />
+    <Folder Include="Views\Aplicacion\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MarketingDigitalBC\MarketingDigitalBC.csproj" />
   </ItemGroup>
 
 </Project>

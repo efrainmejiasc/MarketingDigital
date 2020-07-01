@@ -1,4 +1,5 @@
-﻿using MarketingDigitalBC.Response;
+﻿using MarketingDigitalBC.EngineClass.Interfaces;
+using MarketingDigitalBC.Response;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
@@ -9,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace MarketingDigitalBC.EngineClass
 {
-    public class FolderRepository
+    public class FolderRepository:IFolderRepository
     {
-        public async Task<SBRecoverFolder> GetRecoverFolder(string apiKey, string endPoint)
+        public async Task<SBRecoverFolder> GetRecoverFolder()
         {
             var response = new SBRecoverFolder();
             string respuesta = string.Empty;

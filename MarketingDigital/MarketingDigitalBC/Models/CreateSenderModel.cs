@@ -6,8 +6,8 @@ namespace MarketingDigitalBC.Models
 {
     public class CreateSenderModel
     {
-        public string nameSender { get; set; }
+        public string name { get; set; }
 
-        public string emailSender { get; set; }
+        public string email { get; set; }
     }
 }

@@ -4,10 +4,8 @@ using System.Text;
 
 namespace MarketingDigitalBC.Models
 {
-    public class CreateListModel
+    public class SendEmailCampanaModel
     {
-        public string name { get; set; }
-        public int  folderId{ get; set; }
-
+        public List<string> emailTo { get; set; }
     }
 }

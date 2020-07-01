@@ -4,16 +4,17 @@ using System.Text;
 
 namespace MarketingDigitalBC.Response
 {
-    public class SBRecoverSender
+    public class SBRecoverListInFolder
     {
         public int count { get; set; }
-        public List<Sender> senders { get; set; }
-        public class Sender
+        public List<Lists> lists {get;set; }
+
+        public class Lists
         {
             public int id { get; set; }
             public string name { get; set; }
-            public string email { get; set; }
-            public bool active { get; set; }
+            public int totalSubscribers { get; set; }
+            public int totalBlacklisted { get; set; }
         }
     }
 }
