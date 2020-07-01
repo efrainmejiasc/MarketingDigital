@@ -13,7 +13,7 @@ namespace MarketingDigitalBCS.EngineClass.Interfaces
         string SerializeCreateNewFolder(string nombreCarpeta);
         string SerializeCreateNewSender(string nombre, string email);
         string SerializeCreateNewListContact(string nombreLista, int idCarpeta);
-        string SerializerDataUpdateContact(SBResponseAllContacts.Contacts contacto);
+        string SerializerDataUpdateContact(SBResponseAllContacts.Contacts contacto,string nuevoEmail);
         string SerializerDataNewEmailCampaing(string tag, string nameSender, string emailSender, string nameCampaing, string htmlCode, string subject);
     }
 }

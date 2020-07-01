@@ -188,9 +188,9 @@ namespace MarketingDigitalBCS.EngineClass
             return await contactRepository.DeleteContact(email);
         }
 
-        public async Task<bool> UpdateContact(string email , SBResponseAllContacts.Contacts contact )
+        public async Task<bool> UpdateContact(string email , SBResponseAllContacts.Contacts contact,string nuevoEmail )
         {
-            var jsonContent = serializeModel.SerializerDataUpdateContact(contact);
+            var jsonContent = serializeModel.SerializerDataUpdateContact(contact,nuevoEmail);
             bool result = await contactRepository.UpdateContact(jsonContent, email);
             return result;
         }

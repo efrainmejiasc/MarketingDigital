@@ -32,7 +32,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtListId = new System.Windows.Forms.TextBox();
             this.namelbl = new System.Windows.Forms.Label();
             this.lastNamelbl = new System.Windows.Forms.Label();
@@ -79,12 +79,12 @@
             this.txtEmail.Size = new System.Drawing.Size(250, 20);
             this.txtEmail.TabIndex = 5;
             // 
-            // txttelefono
+            // txtTelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(590, 238);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(250, 20);
-            this.txttelefono.TabIndex = 6;
+            this.txtTelefono.Location = new System.Drawing.Point(590, 238);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(250, 20);
+            this.txtTelefono.TabIndex = 6;
             // 
             // txtListId
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.lastNamelbl);
             this.Controls.Add(this.namelbl);
             this.Controls.Add(this.txtListId);
-            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -201,7 +201,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtListId;
         private System.Windows.Forms.Label namelbl;
         private System.Windows.Forms.Label lastNamelbl;

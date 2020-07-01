@@ -96,19 +96,24 @@ namespace MarketingDigitalBCS.EngineClass
             return JsonConvert.SerializeObject(emailTo);
         }
 
-        public string  SerializerDataUpdateContact(SBResponseAllContacts.Contacts contacto)
+        public string  SerializerDataUpdateContact(SBResponseAllContacts.Contacts contacto,string nuevoEmail)
         {
             UpdateContactModel dataContact = new UpdateContactModel();
             dataContact.attributes = new UpdateContactModel.Attributes();
-            dataContact.attributes.NOMBRE = contacto.attributes.NOMBRE;
-            dataContact.attributes.SURNAME = contacto.attributes.SURNAME;
+            /*dataContact.attributes.NOMBRE = contacto.attributes.NOMBRE;
+            dataContact.attributes.SURNAME = contacto.attributes.SURNAME;*/
+            dataContact.attributes.Email = nuevoEmail;
             if (!string.IsNullOrEmpty(contacto.attributes.SMS))
                  dataContact.attributes.SMS = contacto.attributes.SMS;
             else
                 dataContact.attributes.SMS = string.Empty;
 
             dataContact.email = contacto.email;
-            dataContact.listIds = contacto.listIds;
+            dataContact.listIds = new List<int>();
+            dataContact.emailBlacklisted = false;
+            dataContact.smsBlacklisted = false;
+            dataContact.unlinkListIds = new List<int>();
+            dataContact.smtpBlacklistSender = new List<string>();
 
             return  JsonConvert.SerializeObject(dataContact);
         }

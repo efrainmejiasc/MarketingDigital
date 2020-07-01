@@ -148,18 +148,15 @@ namespace MarketingDigitalBCS.EngineClass
             bool result = true;
             var client = new RestClient(AppConfiguration.EndPointUpdateContact.Replace("EMAIL",email));
             var request = new RestRequest(Method.PUT);
-
-           
-                request.AddHeader("accept", "application/json");
-                request.AddHeader("content-type", "application/json");
-                request.AddHeader("api-key", AppConfiguration.SbApiKey);
-                request.
-                IRestResponse response = await client.ExecuteAsync(request);
-                if (response.StatusCode.ToString() == "204")
-                {
-                    result = false;
-                }
-
+            request.AddHeader("accept", "application/json");
+            request.AddHeader("content-type", "application/json");
+            request.AddHeader("api-key", AppConfiguration.SbApiKey);
+            request.AddJsonBody(jsonContent);
+            IRestResponse response = await client.ExecuteAsync(request);
+            if (response.StatusCode.ToString() == "204")
+            {
+                result = false;
+            }
             return result;
         }
 

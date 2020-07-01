@@ -64,7 +64,7 @@ namespace MarketingDigitalDesktop.Forms
             txtNombre.Text = dataContact.attributes.NOMBRE;
             txtApellido.Text = dataContact.attributes.SURNAME;
             txtEmail.Text = dataContact.email;
-            txttelefono.Text = dataContact.attributes.SMS;
+            txtTelefono.Text = dataContact.attributes.SMS;
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -104,6 +104,7 @@ namespace MarketingDigitalDesktop.Forms
             }
 
             var procesador = new Procesador();
+            string nuevoEmail = string.Empty;
             if (!string.IsNullOrEmpty(nuevoemail.Text))
             {
                 if (!procesador.EmailValido(nuevoemail.Text.ToLower()))
@@ -111,15 +112,17 @@ namespace MarketingDigitalDesktop.Forms
                     MessageBox.Show("EMAIL NO VALIDO", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                dataContact.email = nuevoemail.Text.ToLower();
+                nuevoEmail = nuevoemail.Text.ToLower();
             }
             else
             {
-                dataContact.email = txtEmail.Text;
+               nuevoEmail = txtEmail.Text;
             }
-                
 
-            bool result = await procesador.UpdateContactAsync(email,dataContact);
+            dataContact.attributes.NOMBRE = txtNombre.Text;
+            dataContact.attributes.SURNAME = txtApellido.Text;
+            dataContact.attributes.SMS = txtTelefono.Text;
+            bool result = await procesador.UpdateContactAsync(email, dataContact, nuevoEmail);
             if (!result)
                 MessageBox.Show("CONTACTO ACTUALIZADO CORRECTAMENTE", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else

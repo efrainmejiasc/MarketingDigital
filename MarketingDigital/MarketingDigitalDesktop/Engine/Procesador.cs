@@ -117,12 +117,12 @@ namespace MarketingDigitalDesktop.Engine
             return await procesor.DeleteContact(email);
         }
 
-        public async Task<bool> UpdateContactAsync(string email, SBResponseAllContacts.Contacts contacto)
+        public async Task<bool> UpdateContactAsync(string email, SBResponseAllContacts.Contacts contacto, string nuevoEmail)
         {
             var contactRepository = new ContactRepository();
             var serializeModel = new SerializeModel();
             var procesor = new Procesor(serializeModel,contactRepository);
-            var result =  await procesor.UpdateContact(email,contacto);
+            var result =  await procesor.UpdateContact(email,contacto,nuevoEmail);
             return result;
         }
 

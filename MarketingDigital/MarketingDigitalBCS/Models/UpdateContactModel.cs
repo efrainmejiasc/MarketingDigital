@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,7 +11,15 @@ namespace MarketingDigitalBCS.Models
 
         public Attributes attributes { get; set; }
 
-        public List<int> listIds { get; set; } // Id's de las lista para agregar el contacto
+        public List<int> listIds { get; set; }
+
+        public List<int> unlinkListIds { get; set; }
+
+        public List<string> smtpBlacklistSender { get; set; }
+
+        public bool emailBlacklisted { get; set; }
+
+        public bool smsBlacklisted { get; set; }
 
         public class Attributes
         {
