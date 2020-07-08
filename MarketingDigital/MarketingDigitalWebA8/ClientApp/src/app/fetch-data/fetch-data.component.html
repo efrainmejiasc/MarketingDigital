@@ -1,24 +1,18 @@
-<h1 id="tableLabel">Weather forecast</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container-fluid">
+
+  <div class="container formulario" id="formulario">
+    <input type="text" placeholder="Ingrese nombre completo" class="form-control" required />
+    <input type="email" placeholder="Ingrese email" class="form-control" required />
+    <input type="text" placeholder="Ingrese asunto" class="form-control" required />
+    <textarea id="mensaje" placeholder="Ingrese mensaje" class="form form-control" rows="4" cols="50" maxlength="490"></textarea>
+    <label class="checkbox-inline btn " ><input type="checkbox" id="check" name="check" required class="btn btn-primary" />  No soy un robot </label><br />
+    <button class="form-control btn btn-success">Enviar Consulta</button>
+    <br /><br />
+  </div>
+  <div align="center">
+    <img [src]="mapa" class="imgLogo" />
+  </div>
+</div>

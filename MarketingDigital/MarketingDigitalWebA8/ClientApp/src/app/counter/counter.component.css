@@ -18,7 +18,7 @@ span{
 }
 
 .btnDownload{
-    width:15vw;
-    height:4vh;
-    color:white;
+  font-size:14px;
+  height:auto;
+  width:230px;
 }
