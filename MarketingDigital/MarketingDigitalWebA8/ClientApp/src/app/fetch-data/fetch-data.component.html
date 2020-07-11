@@ -4,12 +4,12 @@
 <div class="container-fluid">
 
   <div class="container formulario" id="formulario">
-    <input type="text" placeholder="Ingrese nombre completo" class="form-control" required />
-    <input type="email" placeholder="Ingrese email" class="form-control" required />
-    <input type="text" placeholder="Ingrese asunto" class="form-control" required />
-    <textarea id="mensaje" placeholder="Ingrese mensaje" class="form form-control" rows="4" cols="50" maxlength="490"></textarea>
-    <label class="checkbox-inline btn " ><input type="checkbox" id="check" name="check" required class="btn btn-primary" />  No soy un robot </label><br />
-    <button class="form-control btn btn-success">Enviar Consulta</button>
+    <input type="text" placeholder="Ingrese nombre completo" class="form-control" required  [(ngModel)]="nombre"/>
+    <input type="email" placeholder="Ingrese email" class="form-control" required  [(ngModel)]="email"/>
+    <input type="text" placeholder="Ingrese asunto" class="form-control" required  [(ngModel)]="asunto"/>
+    <textarea id="mensaje" placeholder="Ingrese mensaje" class="form form-control" rows="4" cols="50" maxlength="490"  [(ngModel)]="mensaje"></textarea>
+    <label class="checkbox-inline btn" ><input type="checkbox"  required class="btn btn-primary"  [(ngModel)]="robot" />  No soy un robot </label><br />
+    <button (click) ="SendEmail();" class="form-control btn btn-success">Enviar Consulta</button>
     <br /><br />
   </div>
   <div align="center">
