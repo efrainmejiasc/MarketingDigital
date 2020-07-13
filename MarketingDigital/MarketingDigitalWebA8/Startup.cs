@@ -1,4 +1,6 @@
 
+using MarketingDigitalWebA8.Engine.Clases;
+using MarketingDigitalWebA8.Engine.Interfaces;
 using MarketingDigitalWebA8.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +32,9 @@ namespace MarketingDigitalWebA8
         {
             services.AddControllersWithViews();
             services.AddDbContext<AppDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+
+            services.AddTransient<IEngineNotify, EngineNotify>();
+            services.AddTransient<IEngineSerialize, EngineSerialize>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

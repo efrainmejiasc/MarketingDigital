@@ -10,6 +10,7 @@ import * as $ from 'jquery';
 export class FetchDataComponent {
 
   public mapa = "assets/image/mapa.JPG";
+  public logo2 = "assets/image/logo2.JPG";
   public nombre: string;
   public email: string;
   public asunto: string;
@@ -23,15 +24,19 @@ export class FetchDataComponent {
       alert("TODOS LOS CAMPOS SON REQUERIDOS");
       return false;
     }
-    this.SendEmailMe(this.email,this.asunto,this.mensaje);
+    if (!this.EmailValido(this.email)) {
+      alert("EL EMAIL PROPORCIONADO NO ES VALIDO");
+      return false;
+    }
+    this.SendEmailTo(this.email,this.asunto,this.mensaje,this.nombre);
   }
 
 
-  public SendEmailMe(mail: string,asun: string,cuerpo: string) {
+  public SendEmailTo(mail: string,asun: string,cuerpo: string, fullName: string) {
   $.ajax({
       type: "POST",
       url: "/Home/SendEmail",
-      data: { emailTo:mail, subject:asun, body:cuerpo },
+      data: { emailTo:mail, subject:asun, body:cuerpo, name:fullName },
       dataType: "json",
       success: function (data) {
         if (data.result === true) {
@@ -41,8 +46,13 @@ export class FetchDataComponent {
            alert('EL EMAIL FALLO AL ENVIAR');
         }
       }  
-  });
+   });
     return false;
+  }
+
+  EmailValido(mail: string): boolean {
+    const regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(mail);
   }
 
 }

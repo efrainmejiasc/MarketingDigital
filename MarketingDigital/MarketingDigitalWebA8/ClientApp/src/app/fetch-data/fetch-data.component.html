@@ -1,18 +1,38 @@
 
 
 
-<div class="container-fluid">
+  <div class="container-fluid">
+     <div style="font-size:45px;color:dimgray;text-align:center;"> Contactanos </div>
 
-  <div class="container formulario" id="formulario">
-    <input type="text" placeholder="Ingrese nombre completo" class="form-control" required  [(ngModel)]="nombre"/>
-    <input type="email" placeholder="Ingrese email" class="form-control" required  [(ngModel)]="email"/>
-    <input type="text" placeholder="Ingrese asunto" class="form-control" required  [(ngModel)]="asunto"/>
-    <textarea id="mensaje" placeholder="Ingrese mensaje" class="form form-control" rows="4" cols="50" maxlength="490"  [(ngModel)]="mensaje"></textarea>
-    <label class="checkbox-inline btn" ><input type="checkbox"  required class="btn btn-primary"  [(ngModel)]="robot" />  No soy un robot </label><br />
-    <button (click) ="SendEmail();" class="form-control btn btn-success">Enviar Consulta</button>
-    <br /><br />
+    <div class="container formulario" id="formulario">
+
+      <label class="form"> Nombre completo: </label>
+      <input type="text" class="form-control" required [(ngModel)]="nombre" />
+
+      <label class="form"> Cuenta de correo electronico: </label>
+      <input type="email" class="form-control" required [(ngModel)]="email" />
+
+      <label class="form"> Consulta o informacion: </label>
+      <input type="text" class="form-control" required [(ngModel)]="asunto" />
+
+      <label class="form"> Mensaje o descripcion: </label>
+      <textarea id="mensaje" class="form form-control" rows="4" cols="50" maxlength="490" [(ngModel)]="mensaje"></textarea>
+
+      <label class="checkbox-inline btn"><input type="checkbox" required class="btn btn-primary" [(ngModel)]="robot" />  No soy un robot </label><br />
+      <button (click)="SendEmail();" class="form-control btn btn-success">Enviar Consulta</button>
+      <br /><br />
+    </div>
+
+    <div style=" text-align: center;font-weight: bold; color:dimgray;">
+      Calle Bruzual 107 - 35, Urb: Don Bosco. Sector: Candelaria
+      Edo.Carabobo,  Valencia - Venezuela
+    </div><br />
+
+    <div align="center">
+      <img [src]="mapa" class="imgLogo" />
+      <img [src]="logo2" class="imgLogo" />
+    </div>
+
+
+
   </div>
-  <div align="center">
-    <img [src]="mapa" class="imgLogo" />
-  </div>
-</div>
