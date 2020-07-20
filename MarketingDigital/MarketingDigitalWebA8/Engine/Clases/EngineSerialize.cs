@@ -32,7 +32,7 @@ namespace MarketingDigitalWebA8.Engine.Clases
             {
                 Saludo = "Efrain en buena hora tienes una consulta!...",
                 Fecha = DateTime.UtcNow.ToString("dd/MM/yyyy"),
-                EmailDestinatario = "emcingenieriadesofware@outlook.com",
+                EmailDestinatario = "emcingenieriadesoftware@outlook.com",
                 Descripcion = "Desde: " + emailTo,
                 Asunto = subject,
                 Observacion = body,
