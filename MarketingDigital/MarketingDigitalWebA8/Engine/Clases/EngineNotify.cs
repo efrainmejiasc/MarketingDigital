@@ -73,7 +73,7 @@ namespace MarketingDigitalWebA8.Engine.Clases
         public bool EnviarNotificacionEmailOutlook(EstructuraMail model, IWebHostEnvironment env)
         {
             bool result = false;
- 
+            model = ConstruccionNotificacion(model, env);
             try
             {
                
@@ -81,7 +81,7 @@ namespace MarketingDigitalWebA8.Engine.Clases
                 oMail.From = "emcingenieriadesoftware@outlook.com";
                 oMail.To = model.EmailDestinatario;
                 oMail.Subject = model.Asunto;
-                oMail.HtmlBody ="HOLA NENE";
+                oMail.HtmlBody = model.Cuerpo;
                 //oMail.TextBody = "";
                 SmtpServer oServer = new SmtpServer("smtp.live.com");
                 oServer.User = "emcingenieriadesoftware@outlook.com";

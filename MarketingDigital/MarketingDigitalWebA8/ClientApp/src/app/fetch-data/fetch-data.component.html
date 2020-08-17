@@ -16,7 +16,7 @@
       <input type="text" class="form-control" required [(ngModel)]="asunto" />
 
       <label class="form"> Mensaje o descripcion: </label>
-      <textarea id="mensaje" class="form form-control" rows="4" cols="50" maxlength="490" [(ngModel)]="mensaje" required></textarea>
+      <textarea id="mensaje" class="form form-control" rows="4" cols="50" maxlength="490" [(ngModel)]="mensaje" required ></textarea>
 
       <label class="checkbox-inline btn"><input type="checkbox" required class="btn btn-primary" [(ngModel)]="robot" />  No soy un robot </label><br />
       <button (click)="SendEmail();" class="form-control btn btn-success">Enviar Consulta</button>

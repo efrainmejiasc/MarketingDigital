@@ -35,8 +35,8 @@ namespace MarketingDigitalWebA8.Engine.Clases
                 EmailDestinatario = "emcingenieriadesoftware@outlook.com",
                 Descripcion = "Desde: " + emailTo,
                 Asunto = subject,
-                Observacion = body,
-                PathLecturaArchivo = string.Empty
+                Observacion = subject + "<br>" + body,
+                PathLecturaArchivo = "EmailBodyQuery.cshtml"
             };
             return model;
         }

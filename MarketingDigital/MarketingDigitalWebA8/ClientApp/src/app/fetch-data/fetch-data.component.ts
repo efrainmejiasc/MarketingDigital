@@ -1,11 +1,16 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as $ from 'jquery';
+import { Routes } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
+export const routes: Routes = [
+  { path: 'home', component: HomeComponent }
+];
 
 @Component({
   selector: 'app-fetch-data',
   templateUrl: './fetch-data.component.html',
-  styleUrls:['./fetch-data.component.css']
+  styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
 
@@ -16,6 +21,7 @@ export class FetchDataComponent {
   public asunto: string;
   public mensaje: string;
   public robot: boolean;
+  
 
 
 
@@ -32,7 +38,8 @@ export class FetchDataComponent {
   }
 
 
-  public SendEmailTo(mail: string,asun: string,cuerpo: string, fullName: string) {
+  public SendEmailTo(mail: string, asun: string, cuerpo: string, fullName: string) {
+  
   $.ajax({
       type: "POST",
       url: "/Home/SendEmail",
@@ -42,11 +49,13 @@ export class FetchDataComponent {
         if (data.result === true) {
           alert('EMAIL ENVIADO CORRECTAMENTE');
           console.log(data);
+          this.router.navigate(['home']);
         } else {
            alert('EL EMAIL FALLO AL ENVIAR');
         }
       }  
-   });
+  });
+
     return false;
   }
 
