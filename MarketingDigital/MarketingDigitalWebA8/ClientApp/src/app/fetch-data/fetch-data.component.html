@@ -7,18 +7,25 @@
     <div class="container formulario" id="formulario">
 
       <label class="form"> Nombre completo: </label>
-      <input type="text" class="form-control" required [(ngModel)]="nombre" />
+      <input type="text" class="form-control" required [(ngModel)]="nombre" id="nombre" />
 
       <label class="form"> Cuenta de correo electronico: </label>
-      <input type="email" class="form-control" required [(ngModel)]="email" />
+      <input type="email" class="form-control" required [(ngModel)]="email" id="email" />
 
       <label class="form"> Consulta o informacion: </label>
-      <input type="text" class="form-control" required [(ngModel)]="asunto" />
+      <input type="text" class="form-control" required [(ngModel)]="asunto" id="asunto" />
 
       <label class="form"> Mensaje o descripcion: </label>
-      <textarea id="mensaje" class="form form-control" rows="4" cols="50" maxlength="490" [(ngModel)]="mensaje" required ></textarea>
+      <textarea id="mensaje" class="form form-control" rows="4" cols="50" maxlength="490" [(ngModel)]="mensaje" required></textarea>
 
-      <label class="checkbox-inline btn"><input type="checkbox" required class="btn btn-primary" [(ngModel)]="robot" />  No soy un robot </label><br />
+      <div id="loading" class="loader" style="display:none;">
+      </div>
+      <div id="msg-process" style="font-size: 20px; text-align: center; padding: 15px; font-weight: bold; display: none;">
+          Procesando...
+        <div>  Esto puede tardar un minuto</div>
+      </div>
+
+      <label class="checkbox-inline btn"><input type="checkbox" required class="btn btn-primary" [(ngModel)]="robot" id="robot"/>  No soy un robot </label><br />
       <button (click)="SendEmail();" class="form-control btn btn-success">Enviar Consulta</button>
       <br /><br />
     </div>

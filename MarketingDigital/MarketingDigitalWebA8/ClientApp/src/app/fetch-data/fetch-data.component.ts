@@ -1,11 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as $ from 'jquery';
-import { Routes } from '@angular/router';
+import { Router } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
-export const routes: Routes = [
-  { path: 'home', component: HomeComponent }
-];
+
+
+
 
 @Component({
   selector: 'app-fetch-data',
@@ -13,6 +13,7 @@ export const routes: Routes = [
   styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
+  constructor(@Inject(Router) private router: Router) {}
 
   public mapa = "assets/image/mapa.JPG";
   public logo2 = "assets/image/logo2.JPG";
@@ -21,7 +22,6 @@ export class FetchDataComponent {
   public asunto: string;
   public mensaje: string;
   public robot: boolean;
-  
 
 
 
@@ -34,7 +34,10 @@ export class FetchDataComponent {
       alert("EL EMAIL PROPORCIONADO NO ES VALIDO");
       return false;
     }
-    this.SendEmailTo(this.email,this.asunto,this.mensaje,this.nombre);
+
+    $('#msg-process').show();
+    $('#loading').show();
+    this.SendEmailTo(this.email, this.asunto, this.mensaje, this.nombre);
   }
 
 
@@ -47,13 +50,23 @@ export class FetchDataComponent {
       dataType: "json",
       success: function (data) {
         if (data.result === true) {
+          $('#msg-process').hide();
+          $('#loading').hide();
           alert('EMAIL ENVIADO CORRECTAMENTE');
           console.log(data);
-          this.router.navigate(['home']);
         } else {
            alert('EL EMAIL FALLO AL ENVIAR');
         }
-      }  
+    },
+    complete: function () {
+      console.log('SEND_EMAIL');
+      $('#nombre').val('');
+      $('#email').val('');
+      $('#asunto').val('');
+      $('#mensaje').val('');
+      $('#robot').prop("checked", false);
+    }
+
   });
 
     return false;
@@ -62,6 +75,10 @@ export class FetchDataComponent {
   EmailValido(mail: string): boolean {
     const regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(mail);
+  }
+
+  public  Navegar() {
+    this.router.navigate(['/']);
   }
 
 }

@@ -23,14 +23,14 @@ namespace MarketingDigitalWebA8.Engine.Clases
             {
                 MailMessage mensaje = new MailMessage();
                 System.Net.Mail.SmtpClient servidor = new System.Net.Mail.SmtpClient();
-                mensaje.From = new System.Net.Mail.MailAddress("EMC Ingenieria de Software <efrainmejiasc@gmail.com>");
+                mensaje.From = new System.Net.Mail.MailAddress("EMC Ingenieria de Software <supergozom@gmail.com>");
                 mensaje.Subject = model.Asunto;
                 mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
                 mensaje.Body = model.Cuerpo;
                 mensaje.BodyEncoding = System.Text.Encoding.UTF8;
                 mensaje.IsBodyHtml = true;
                 mensaje.To.Add(new System.Net.Mail.MailAddress(model.EmailDestinatario));
-                servidor.Credentials = new System.Net.NetworkCredential("efrainmejiasc@gmail.com", "1234fabrizio");
+                servidor.Credentials = new System.Net.NetworkCredential("supergozom@gmail.com", "1234gabriel");
                 servidor.Port = 587;
                 servidor.Host = "smtp.gmail.com";
                 servidor.EnableSsl = true;
