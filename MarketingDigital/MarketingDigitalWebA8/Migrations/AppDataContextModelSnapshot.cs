@@ -26,10 +26,17 @@ namespace MarketingDigitalWebA8.Migrations
                         .HasColumnType("INT")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Company")
+                        .HasColumnType("VARCHAR(50)");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("DATETIME");
 
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(50)");
+
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
@@ -42,12 +49,10 @@ namespace MarketingDigitalWebA8.Migrations
                         .HasColumnType("VARCHAR(100)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<string>("SurName")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(50)");
+                    b.Property<bool>("Status")
+                        .HasColumnType("BIT");
 
                     b.HasKey("Id");
 

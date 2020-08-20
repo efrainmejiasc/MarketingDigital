@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MarketingDigitalWebA8.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,10 +14,12 @@ namespace MarketingDigitalWebA8.Migrations
                     Id = table.Column<int>(type: "INT", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    SurName = table.Column<string>(type: "VARCHAR(50)", nullable: false),
+                    LastName = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Email = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     Password = table.Column<string>(type: "VARCHAR(100)", nullable: false),
-                    Phone = table.Column<string>(type: "VARCHAR(50)", nullable: false),
+                    Company = table.Column<string>(type: "VARCHAR(50)", nullable: true),
+                    Phone = table.Column<string>(type: "VARCHAR(50)", nullable: true),
+                    Status = table.Column<bool>(type: "BIT", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "DATETIME", nullable: false)
                 },
                 constraints: table =>

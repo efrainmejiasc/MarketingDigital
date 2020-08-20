@@ -22,34 +22,36 @@ namespace MarketingDigitalWebA8.Models.DbModels
         [Column(Order = 2, TypeName = "VARCHAR(50)")]
         public string Name { get; set; }
 
-
-        [DisplayName("SurName")]
+        [DisplayName("LastName")]
         [Required]
         [Column(Order = 3, TypeName = "VARCHAR(50)")]
-        public string SurName { get; set; }
-
+        public string LastName { get; set; }
 
         [DisplayName("Email")]
         [Required]
         [Column(Order = 4, TypeName = "VARCHAR(50)")]
         public string Email { get; set; }
 
-
         [DisplayName("Password")]
         [Required]
         [Column(Order = 5, TypeName = "VARCHAR(100)")]
         public string Password { get; set; }
 
+        [DisplayName("Company")]
+        [Column(Order = 6, TypeName = "VARCHAR(50)")]
+        public string Company { get; set; }
 
         [DisplayName("Phone")]
-        [Required]
-        [Column(Order = 6, TypeName = "VARCHAR(50)")]
+        [Column(Order = 7, TypeName = "VARCHAR(50)")]
         public string Phone { get; set; }
 
+        [DisplayName("Status")]
+        [Column(Order = 8, TypeName = "BIT")]
+        public bool Status { get; set; }
 
         [DisplayName("CreateDate")]
         [Required]
-        [Column(Order = 7, TypeName = "DATETIME")]
-        public DateTime CreateDate {get;set;}
+        [Column(Order = 9, TypeName = "DATETIME")]
+        public DateTime CreateDate { get; set; }
     }
 }

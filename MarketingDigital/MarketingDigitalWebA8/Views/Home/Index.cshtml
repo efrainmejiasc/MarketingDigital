@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/css/Site.css" />
+
+<div id="myModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:630px;">
+            <div class="modal-header">
+                <h4>EMC Ingenieria de Software</h4>
+                <button type="button" class="close" data-dismiss="modal" onclick="CloseModal();">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <label>@ViewBag.Description</label>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+    var result = '@ViewBag.Result';
+        if (result != '')
+        {
+            $('#myModal').show();
+        }
+    });
+
+
+    function CloseModal() {
+        $('#myModal').hide();
+    }
+
+</script>

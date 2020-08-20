@@ -9,14 +9,19 @@ namespace MarketingDigitalWebA8.Models
 {
     public class AppDataContext : DbContext
     {
-        public AppDataContext() 
+        public AppDataContext()
         {
         }
-
         public AppDataContext(DbContextOptions options) : base(options)
         {
         }
 
         public DbSet<EmpresaCliente> EmpresaCliente{ get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<EmpresaCliente>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+        }
     }
 }

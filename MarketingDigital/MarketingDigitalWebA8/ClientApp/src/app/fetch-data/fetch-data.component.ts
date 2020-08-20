@@ -54,6 +54,7 @@ export class FetchDataComponent {
           $('#loading').hide();
           alert('EMAIL ENVIADO CORRECTAMENTE');
           console.log(data);
+          window.location.href = 'http://joselelu-001-site2.etempurl.com/';
         } else {
            alert('EL EMAIL FALLO AL ENVIAR');
         }
