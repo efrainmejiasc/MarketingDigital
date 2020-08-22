@@ -38,7 +38,7 @@ export class LoginComponent {
         $('#msg-process').hide();
         $('#loading').hide();
         if (data.result ===  false) {
-          alert(data.Description);
+          alert(data.description);
           console.log(data);
         } else {
           window.location.href = 'http://joselelu-001-site2.etempurl.com/counter';
