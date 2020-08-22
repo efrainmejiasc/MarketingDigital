@@ -45,12 +45,12 @@ export class RegisterComponent  {
       data: { name: this.name, lastName: this.lastName, email: this.email, password: this.password, phone: this.phone, company:this.company },
       dataType: "json",
       success: function (data) {
+        $('#msg-process').hide();
+        $('#loading').hide();
         if (data.result === true) {
-          $('#msg-process').hide();
-          $('#loading').hide();
           alert('REGISTRO EXITOSO');
           console.log(data);
-          //window.location.href = 'http://joselelu-001-site2.etempurl.com/';
+          window.location.href = 'http://joselelu-001-site2.etempurl.com/';
         } else {
           alert('REGISTRO FALLO');
         }

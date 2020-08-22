@@ -11,13 +11,16 @@
     <div class="modal-dialog">
         <div class="modal-content" style="width:630px;">
             <div class="modal-header">
-                <h2>EMC Ingenieria de Software</h2>
-                
-                <button type="button" class="close" data-dismiss="modal" onclick="CloseModal();">&times;</button>
-
+                <div style="text-align:center;color:silver;">
+                    <h2>EMC Ingenieria de Software</h2>
+                </div>
+                <div align="center">
+                    <img src="../Content/image/logo1.jpg" class="imgLogo" />
+                </div>
+                <!--<button type="button" class="close" data-dismiss="modal" onclick="CloseModal();">&times;</button>-->
             </div>
-            <div class="modal-body">
-                <label>@ViewBag.Description</label>
+            <div class="modal-body" style="text-align:center;color:silver;padding:5px;">
+                <h2>@ViewBag.Description</h2>
             </div>
             <div class="modal-footer">
             </div>
@@ -42,7 +45,7 @@
     }
 
     function GoIndex() {
-        window.location.href = 'http://joselelu-001-site2.etempurl.com/';
+        window.location.href = 'http://joselelu-001-site2.etempurl.com/login';
     }
 
 </script>

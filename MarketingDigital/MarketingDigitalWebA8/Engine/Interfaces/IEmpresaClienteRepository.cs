@@ -8,6 +8,7 @@ namespace MarketingDigitalWebA8.Engine.Interfaces
 {
     public interface IEmpresaClienteRepository
     {
+        EmpresaCliente GetEmpresaCliente(string password);
         EmpresaCliente AddEmpresaCliente(EmpresaCliente model);
         EmpresaCliente UpdateStatusEmpresaCliente(string name, string lastName, string email, bool status);
     }

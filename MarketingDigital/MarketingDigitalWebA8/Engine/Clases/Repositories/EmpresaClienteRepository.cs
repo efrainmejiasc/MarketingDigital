@@ -33,13 +33,23 @@ namespace MarketingDigitalWebA8.Engine.Clases.Repositories
             using (AppDataContext)
             {
                 model = AppDataContext.EmpresaCliente.Where(x => x.Name == name && x.LastName == lastName && x.Email == email).FirstOrDefault();
-                if (model != null)
+                if (model.Id > 0)
                 {
                     AppDataContext.EmpresaCliente.Attach(model);
                     model.Status = status;
                     AppDataContext.SaveChanges();
                 }
               
+            }
+            return model;
+        }
+
+        public EmpresaCliente GetEmpresaCliente(string password)
+        {
+            var model = new EmpresaCliente();
+            using (AppDataContext)
+            {
+                model = AppDataContext.EmpresaCliente.Where(x => x.Password == password).FirstOrDefault();
             }
             return model;
         }

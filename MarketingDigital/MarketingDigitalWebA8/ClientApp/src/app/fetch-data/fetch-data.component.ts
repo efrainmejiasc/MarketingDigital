@@ -48,10 +48,10 @@ export class FetchDataComponent {
       url: "/Home/SendEmail",
       data: { emailTo:mail, subject:asun, body:cuerpo, name:fullName },
       dataType: "json",
-      success: function (data) {
+    success: function (data) {
+      $('#msg-process').hide();
+      $('#loading').hide();
         if (data.result === true) {
-          $('#msg-process').hide();
-          $('#loading').hide();
           alert('EMAIL ENVIADO CORRECTAMENTE');
           console.log(data);
           window.location.href = 'http://joselelu-001-site2.etempurl.com/';

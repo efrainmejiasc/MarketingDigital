@@ -22,3 +22,9 @@
     width: 35%;
     height: 70%;
 }
+
+.imgLogo {
+    border-radius: 60%;
+    width: 300px;
+    margin-top: 5%;
+}

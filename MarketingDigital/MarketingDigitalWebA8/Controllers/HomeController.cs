@@ -45,7 +45,7 @@ namespace MarketingDigitalWebA8.Controllers
         [HttpPost]
         public IActionResult RegisteredUser(string name, string lastName, string email, string password, string phone, string company)
         {
-            password = EngineTool.ConvertirBase64(password);
+            password = EngineTool.ConvertirBase64(email + password);
             var model = EngineSerialize.SerializeEmpresaCliente(name, lastName, email, password, company, phone);
             var empresaCliente = EmpresaClienteRepository.AddEmpresaCliente(model);
             var resultado = empresaCliente.Id > 0 ? true : false; 
@@ -71,10 +71,37 @@ namespace MarketingDigitalWebA8.Controllers
                 if (model.Id > 0)
                 {
                     ViewBag.Result = true;
-                    ViewBag.Description = "La cuenta fue activada correctamente";
+                    ViewBag.Description = "Tu cuenta fue activada correctamente";
                 }
             }
             return this.View();
         }
+
+        [HttpPost]
+        public IActionResult Login (string email , string password)
+        {
+            var respuesta = new RespuestaModel();
+            var encodePassword = EngineTool.ConvertirBase64(email + password);
+            var empresaCliente = EmpresaClienteRepository.GetEmpresaCliente(encodePassword);
+            if (empresaCliente.Id == 0)
+            {
+                respuesta.Result = false;
+                respuesta.Description = "Verifique usuario y contraseña";
+            }
+            else if (empresaCliente.Status == false)
+            {
+                respuesta.Result = false;
+                respuesta.Description = "La cuenta no ha sido activada";
+            } 
+            else 
+            {
+                respuesta.Result = true;
+                respuesta.Description = "Autentificado";
+            }
+
+            return Json(respuesta);
+        }
+
+
     }
 }
