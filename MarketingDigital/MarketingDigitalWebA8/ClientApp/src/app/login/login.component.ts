@@ -31,7 +31,7 @@ export class LoginComponent {
 
     $.ajax({
       type: "POST",
-      url: "/Home/Login",
+      url: "Home/Login",
       data: { email : mail, password: contraseña},
       dataType: "json",
       success: function (data) {

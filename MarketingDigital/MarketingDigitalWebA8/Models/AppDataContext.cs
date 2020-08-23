@@ -23,5 +23,7 @@ namespace MarketingDigitalWebA8.Models
                 .HasIndex(u => u.Email)
                 .IsUnique();
         }
+
+        public DbSet<AppLog> AppLog { get; set; }
     }
 }

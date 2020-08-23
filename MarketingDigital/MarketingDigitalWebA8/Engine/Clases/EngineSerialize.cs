@@ -67,7 +67,7 @@ namespace MarketingDigitalWebA8.Engine.Clases
                 Fecha = DateTime.UtcNow.ToString("dd/MM/yyyy"),
                 EmailDestinatario = emailTo,
                 Asunto = "Activa tu cuenta en EMC Ingenieria de Software",
-                Observacion = "Haz Click en el siguiente link !!",
+                Observacion = "Haz Click en el siguiente link !! <br> Tambien puedes copiar y pegar el link en tu navegador...",
                 Descripcion = "http://joselelu-001-site2.etempurl.com/Home/Index?ide=" + link,
                 PathLecturaArchivo = "EmailBodyQuery.cshtml"
             };

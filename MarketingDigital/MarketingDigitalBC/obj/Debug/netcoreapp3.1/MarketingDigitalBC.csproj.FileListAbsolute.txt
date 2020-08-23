@@ -1,7 +1,6 @@
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\bin\Debug\netcoreapp3.1\MarketingDigitalBC.deps.json
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\bin\Debug\netcoreapp3.1\MarketingDigitalBC.dll
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\bin\Debug\netcoreapp3.1\MarketingDigitalBC.pdb
-C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.csprojAssemblyReference.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.AssemblyInfoInputs.cache
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.AssemblyInfo.cs
 C:\Users\ASUS\Documents\GitHub\MarketingDigital\MarketingDigital\MarketingDigitalBC\obj\Debug\netcoreapp3.1\MarketingDigitalBC.csproj.CoreCompileInputs.cache

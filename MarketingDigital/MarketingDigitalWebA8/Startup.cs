@@ -39,6 +39,8 @@ namespace MarketingDigitalWebA8
             services.AddTransient<IEngineSerialize, EngineSerialize>();
             services.AddTransient<IEngineTool, EngineTool>();
             services.AddTransient<IEmpresaClienteRepository, EmpresaClienteRepository>();
+            services.AddTransient<IAppLogRepository, AppLogRepository>();
+            services.AddTransient<IProcesador, Procesador>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

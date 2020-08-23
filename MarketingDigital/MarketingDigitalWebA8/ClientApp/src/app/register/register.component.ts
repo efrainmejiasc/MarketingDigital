@@ -41,8 +41,8 @@ export class RegisterComponent  {
 
     $.ajax({
       type: "POST",
-      url: "/Home/RegisteredUser",
-      data: { name: this.name, lastName: this.lastName, email: this.email, password: this.password, phone: this.phone, company:this.company },
+      url: "Home/RegisterUser",
+      data: { name: this.name, lastName: this.lastName, email: this.email, password: this.password, phone: this.phone, company: this.company },
       dataType: "json",
       success: function (data) {
         $('#msg-process').hide();

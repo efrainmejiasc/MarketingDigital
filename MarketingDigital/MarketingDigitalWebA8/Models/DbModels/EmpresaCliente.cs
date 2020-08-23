@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MarketingDigitalWebA8.Models.DbModels
 {
-
+    [Table("EmpresaCliente")]
     public class EmpresaCliente
     {
         [Key]

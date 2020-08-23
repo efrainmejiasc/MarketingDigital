@@ -8,6 +8,7 @@ using MarketingDigitalWebA8.Models.ObjModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using MarketingDigitalBC;
 
 namespace MarketingDigitalWebA8.Controllers
 {
@@ -18,14 +19,16 @@ namespace MarketingDigitalWebA8.Controllers
         private readonly IWebHostEnvironment env;
         private readonly IEngineTool EngineTool;
         private readonly IEmpresaClienteRepository EmpresaClienteRepository;
+        private readonly IProcesador Procesador;
 
-        public HomeController(IEngineNotify _EngineNotify , IEngineSerialize _EngineSerialize, IWebHostEnvironment _env, IEngineTool _EngineTool, IEmpresaClienteRepository _EmpresaClienteRepository)
+        public HomeController(IEngineNotify _EngineNotify , IEngineSerialize _EngineSerialize, IWebHostEnvironment _env, IEngineTool _EngineTool, IEmpresaClienteRepository _EmpresaClienteRepository,IProcesador _Procesador)
         {
             this.EngineNotify = _EngineNotify;
             this.EngineSerialize = _EngineSerialize;
             this.EngineTool = _EngineTool;
             this.EmpresaClienteRepository = _EmpresaClienteRepository;
             this.env = _env;
+            this.Procesador = _Procesador;
         }
 
         [HttpPost]
@@ -43,7 +46,7 @@ namespace MarketingDigitalWebA8.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegisteredUser(string name, string lastName, string email, string password, string phone, string company)
+        public IActionResult RegisterUser(string name, string lastName, string email, string password, string phone, string company)
         {
             password = EngineTool.ConvertirBase64(email + password);
             var model = EngineSerialize.SerializeEmpresaCliente(name, lastName, email, password, company, phone);
@@ -56,7 +59,13 @@ namespace MarketingDigitalWebA8.Controllers
             var parameterLink = EngineTool.ConvertirBase64(name + "#" + lastName + "#" + email);
             var estructuraEmail = EngineSerialize.SerializeEmailRegisteredUser(email, name, lastName, parameterLink);
             EngineNotify.EnviarMailNotificacion(estructuraEmail, env);
+            _ = CreateAddContactAsync(name, lastName, email);
             return Json(result);
+        }
+
+        private async Task CreateAddContactAsync(string name, string lastName, string email, string phone = "")
+        {
+            bool result = await Procesador.CrearAgregarContactoAsync(name, lastName, email, phone, 2 , false);
         }
 
         [HttpGet]

@@ -36,6 +36,12 @@
     <None Include="wwwroot\Content\css\Site.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="MarketingDigitalBC">
+      <HintPath>..\MarketingDigitalBC\bin\Debug\netcoreapp3.1\MarketingDigitalBC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
