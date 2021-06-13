@@ -78,23 +78,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\EfrainMejiasC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
+      "projectUniqueName": "C:\\Users\\EfrainMejiasC\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
       "projectName": "MarketingDigitalBC",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\obj\\",
+      "projectPath": "C:\\Users\\EfrainMejiasC\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
+      "packagesPath": "C:\\Users\\EfrainMejiasC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EfrainMejiasC\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EfrainMejiasC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -106,6 +102,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -117,6 +114,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -142,7 +140,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

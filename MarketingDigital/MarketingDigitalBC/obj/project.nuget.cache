@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bQW56CiM6/UyZcHt99Zu4ZrpU79r8Xrb5Wd3xNFaS5lS92oIET+TjKd0IZOg6/8XnZc16fIc5p+kRdVac3fjmA==",
+  "dgSpecHash": "94W0zRd5uYBz10TtCrV/Y/uFCw2XCcdBHArOAk6dLbEQUkoZ35UYQy/foX9QxEU/yBGU+JJdA6JB2QG8i7Br5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
+  "projectFilePath": "C:\\Users\\EfrainMejiasC\\Documents\\GitHub\\MarketingDigital\\MarketingDigital\\MarketingDigitalBC\\MarketingDigitalBC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512"
+    "C:\\Users\\EfrainMejiasC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\EfrainMejiasC\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512"
   ],
   "logs": []
 }
