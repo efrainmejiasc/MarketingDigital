@@ -37,9 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MarketingDigitalBC">
-      <HintPath>..\MarketingDigitalBC\bin\Debug\netcoreapp3.1\MarketingDigitalBC.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\MarketingDigitalBC\MarketingDigitalBC.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
